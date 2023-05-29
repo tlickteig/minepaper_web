@@ -15,7 +15,14 @@
         <?php require "partial/header.php"; ?>
         <div id="dvMainWindow">
             <h2>Welcome to MinePaper.net!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales faucibus pretium. Nunc nec blandit erat. Sed a dolor luctus, laoreet justo at, auctor massa. In malesuada lorem vitae odio sollicitudin egestas. Aliquam sed ligula at orci aliquam lobortis. In sit amet odio eros. In quis ultrices neque, et elementum nulla.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit. Sed sodales faucibus 
+                pretium. Nunc nec blandit erat. Sed a 
+                dolor luctus, laoreet justo at, auctor 
+                massa. In malesuada lorem vitae odio 
+                sollicitudin egestas. Aliquam sed ligula 
+                at orci aliquam lobortis. In sit amet odio 
+                eros. In quis ultrices neque, et elementum nulla.</p>
             <table id="tbImageGallery">
                 <tr>
                     <td>
@@ -29,6 +36,10 @@
                     </td>
                 </tr>
             </table>
+            <p></p>
+            <a href="#">
+                <h2>Download now</h2>
+            </a>
         </div>
     </body>
 </html>
