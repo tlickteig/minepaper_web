@@ -2,6 +2,10 @@
     background-color: lightblue !important;
 }
 
+.nav-item {
+    text-decoration: underline;
+}
+
 #bdyMainWindow {
     width: 1000px;
     margin: 1em auto;
@@ -15,7 +19,6 @@
     margin: 0 auto;
     text-align: center;
     padding: .125em;
-    background-color: lightblue;
     border-radius: 5px;
 }
 
@@ -27,4 +30,9 @@
 
 #dvHeader li a {
 	font-weight: normal;
+}
+
+#dvMainWindow {
+    background-color: lightgray;
+    border-radius: 5px;
 }
