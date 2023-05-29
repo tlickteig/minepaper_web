@@ -274,11 +274,14 @@ p {
     margin: 1em auto;
     text-align: center;
     height: fit-content;
-    background-color: aliceblue;
+    background-image: url("/img/background.jpg");
+    background-size: cover;
 }
 
 #dvMainWindow {
     padding: 1em;
+    background-color: lightgray;
+    border-radius: 5px;
 }
 
 #dvHeader {
@@ -297,11 +300,6 @@ p {
 
 #dvHeader li a {
 	font-weight: normal;
-}
-
-#dvMainWindow {
-    background-color: lightgray;
-    border-radius: 5px;
 }
 
 #tbImageGallery {

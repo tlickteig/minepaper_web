@@ -26,13 +26,13 @@
             <table id="tbImageGallery">
                 <tr>
                     <td>
-                        <img src="wallpapers/<?php echo $randomImages[0]; ?>" class="rounded" />
+                        <img src="wallpapers/<?php echo $randomImages[0]; ?>" class="rounded pixel-corners-radius-10-px" />
                     </td>
                     <td>
-                        <img src="wallpapers/<?php echo $randomImages[1]; ?>" class="rounded" />
+                        <img src="wallpapers/<?php echo $randomImages[1]; ?>" class="rounded pixel-corners-radius-10-px" />
                     </td>
                     <td>
-                        <img src="wallpapers/<?php echo $randomImages[2]; ?>" class="rounded" />
+                        <img src="wallpapers/<?php echo $randomImages[2]; ?>" class="rounded pixel-corners-radius-10-px" />
                     </td>
                 </tr>
             </table>
