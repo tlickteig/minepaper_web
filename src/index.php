@@ -13,7 +13,7 @@
     <?php require "partial/head.php"; ?>
     <body id="bdyMainWindow">
         <?php require "partial/header.php"; ?>
-        <div id="dvMainWindow">
+        <div id="dvMainWindow" class="pixel-corners-radius-10-px-border-1px">
             <h2>Welcome to MinePaper.net!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur 
                 adipiscing elit. Sed sodales faucibus 
