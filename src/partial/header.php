@@ -5,7 +5,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/wallpapers">Downloads</a>
+                        <a class="nav-link" href="#">Downloads</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
