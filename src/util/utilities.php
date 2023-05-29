@@ -3,7 +3,7 @@
 
         $is_acpu_available = function_exists('apcu_enabled') && apcu_enabled();
         $files = array();
-        $cache_ttl_hours = .1;
+        $cache_ttl_hours = 3;
 
         if ($is_acpu_available) {
             if (apcu_exists("FILE_LIST")) {

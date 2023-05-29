@@ -11,6 +11,10 @@ a {
     font-family: Minecraft;
 }
 
+p {
+    font-family: Minecraft;
+}
+
 .bg-primary {
     background-color: lightblue !important;
 }
@@ -20,11 +24,15 @@ a {
 }
 
 #bdyMainWindow {
-    width: 1000px;
+    width: 75%;
     margin: 1em auto;
     text-align: center;
     height: fit-content;
     background-color: aliceblue;
+}
+
+#dvMainWindow {
+    padding: 1em;
 }
 
 #dvHeader {
@@ -48,4 +56,16 @@ a {
 #dvMainWindow {
     background-color: lightgray;
     border-radius: 5px;
+}
+
+#tbImageGallery {
+    width: 100%;
+}
+
+#tbImageGallery td {
+    padding: .5em;
+}
+
+#tbImageGallery img {
+    width: 100%;
 }

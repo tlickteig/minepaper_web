@@ -15,7 +15,20 @@
         <?php require "partial/header.php"; ?>
         <div id="dvMainWindow">
             <h2>Welcome to MinePaper.net!</h2>
-
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales faucibus pretium. Nunc nec blandit erat. Sed a dolor luctus, laoreet justo at, auctor massa. In malesuada lorem vitae odio sollicitudin egestas. Aliquam sed ligula at orci aliquam lobortis. In sit amet odio eros. In quis ultrices neque, et elementum nulla.</p>
+            <table id="tbImageGallery">
+                <tr>
+                    <td>
+                        <img src="wallpapers/<?php echo $randomImages[0]; ?>" class="rounded" />
+                    </td>
+                    <td>
+                        <img src="wallpapers/<?php echo $randomImages[1]; ?>" class="rounded" />
+                    </td>
+                    <td>
+                        <img src="wallpapers/<?php echo $randomImages[2]; ?>" class="rounded" />
+                    </td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
