@@ -37,7 +37,7 @@
                 </tr>
             </table>
             <p></p>
-            <a href="#">
+            <a href="downloads.php">
                 <h2>Download now</h2>
             </a>
         </div>

@@ -21,7 +21,7 @@
                 || str_contains($temp_file, ".png")
                 || str_contains($temp_file, ".JPG")
                 || str_contains($temp_file, ".PNG")
-                || str_contains($temp_file, ".JPG")) {
+                || str_contains($temp_file, ".JPEG")) {
                     array_push($files, str_replace($_SERVER['DOCUMENT_ROOT'] . "/wallpapers/", "", $temp_file));
                 }
             }
