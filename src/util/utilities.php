@@ -33,4 +33,15 @@
 
         return $files;
     }
+
+    function get_browser_name($user_agent)
+{
+    if (preg_match('(Windows|Wince)', $user_agent)) return 'Windows';
+    elseif (preg_match('(Mac)', $user_agent)) return 'Mac';
+    
+    return 'Other';
+    if (preg_match('(android)', $user_agent)) return 'Anroid';
+    if (preg_match('(iPhone|iPod|iPad)', $user_agent)) return 'MacLike';
+    if (preg_match('(Win)', $user_agent)) return 'Windows';
+}
 ?>
