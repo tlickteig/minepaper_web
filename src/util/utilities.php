@@ -1,4 +1,5 @@
 <?php 
+    require_once('constants.php');
     function return_image_list_with_caching() {
 
         $is_acpu_available = function_exists('apcu_enabled') && apcu_enabled();
@@ -34,14 +35,19 @@
         return $files;
     }
 
-    function get_browser_name($user_agent)
-{
-    if (preg_match('(Windows|Wince)', $user_agent)) return 'Windows';
-    elseif (preg_match('(Mac)', $user_agent)) return 'Mac';
+    function get_user_agent() {
+        return $_SERVER["HTTP_USER_AGENT"] ?? null;
+    }
+
+    function get_os_name($valueName = "quickName")
+    {
+        $user_agent = get_user_agent();
+        if (preg_match(Constants::$windowsArr["regex"], $user_agent)) return Constants::$windowsArr[$valueName];
+        elseif (preg_match(Constants::$macArr["regex"], $user_agent)) return Constants::$macArr[$valueName];
     
-    return 'Other';
-    if (preg_match('(android)', $user_agent)) return 'Anroid';
-    if (preg_match('(iPhone|iPod|iPad)', $user_agent)) return 'MacLike';
-    if (preg_match('(Win)', $user_agent)) return 'Windows';
-}
+        return "";
+        if (preg_match('(android)', $user_agent)) return 'Android';
+        if (preg_match('(iPhone|iPod|iPad)', $user_agent)) return 'MacLike';
+        if (preg_match('(Win)', $user_agent)) return 'Windows';
+    }
 ?>
