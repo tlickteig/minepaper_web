@@ -20,11 +20,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="sourceOptions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle Github source navigation">Github</a> 
                         <div class="dropdown-menu"  aria-labelledby="sourceOptions">
-                            <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_uwp/releases/latest">Windows</a>
+                            <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_uwp/releases/latest" target="_blank" rel="noreferrer noopener">Windows</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_mac/releases/latest">Mac</a>
+                            <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_mac/releases/latest" target="_blank" rel="noreferrer noopener">Mac</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_web/releases/latest">Web</a>
+                            <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_web/releases/latest" target="_blank" rel="noreferrer noopener">Web</a>
                         </div>
                     </li>
                 </ul>
