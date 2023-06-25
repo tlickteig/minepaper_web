@@ -274,7 +274,7 @@ p {
     margin: 1em auto;
     text-align: center;
     height: fit-content;
-    background-image: url("/img/background.jpg");
+    background-image: url("/img/background.png");
     background-size: cover;
 }
 
