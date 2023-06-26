@@ -1,7 +1,10 @@
+<?php 
+    require_once('util/constants.php');
+?>
 <header>
     <div id="dvHeader">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.php">MinePaper.net</a>
+            <a class="navbar-brand" href="index.php"><?= Constants::$projectName ?>.net</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle site navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
