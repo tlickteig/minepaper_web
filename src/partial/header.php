@@ -17,6 +17,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="downloads.php">Install</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tos.php">Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacyPolicy.php">Privacy Policy</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="sourceOptions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle Github source navigation">Github</a> 
                         <div class="dropdown-menu"  aria-labelledby="sourceOptions">
@@ -26,15 +35,6 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_web/releases/latest" target="_blank" rel="noreferrer noopener">Web</a>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutUs.php">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tos.php">Terms of Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="privacyPolicy.php">Privacy Policy</a>
                     </li>
                 </ul>
             </div>
