@@ -4,4 +4,5 @@
     <script src="./lib/bootstrap/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/standard.css" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
