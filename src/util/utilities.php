@@ -43,11 +43,10 @@
     {
         $user_agent = get_user_agent();
         if (preg_match(Constants::$windowsArr["regex"], $user_agent)) return Constants::$windowsArr[$valueName];
-        elseif (preg_match(Constants::$macArr["regex"], $user_agent)) return Constants::$macArr[$valueName];
-    
-        return "";
-        if (preg_match('(android)', $user_agent)) return 'Android';
-        if (preg_match('(iPhone|iPod|iPad)', $user_agent)) return 'MacLike';
+        if (preg_match(Constants::$macArr["regex"], $user_agent)) return Constants::$macArr[$valueName];
+        // if (preg_match('(android)', $user_agent)) return 'Android';
+        // if (preg_match('(iPhone|iPod|iPad)', $user_agent)) return 'MacLike';
         if (preg_match('(Win)', $user_agent)) return 'Windows';
+        return null;
     }
 ?>
