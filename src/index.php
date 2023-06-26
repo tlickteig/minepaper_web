@@ -15,30 +15,23 @@
         <?php require "partial/header.php"; ?>
         <div id="dvMainWindow" class="pixel-corners-radius-10-px-border-1px">
             <h2>Welcome to MinePaper.net!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur 
-                adipiscing elit. Sed sodales faucibus 
-                pretium. Nunc nec blandit erat. Sed a 
-                dolor luctus, laoreet justo at, auctor 
-                massa. In malesuada lorem vitae odio 
-                sollicitudin egestas. Aliquam sed ligula 
-                at orci aliquam lobortis. In sit amet odio 
-                eros. In quis ultrices neque, et elementum nulla.</p>
+            <h5>Automatically rotate your desktop background between stunning Minecraft views.</h5>
             <table id="tbImageGallery">
                 <tr>
                     <td>
-                        <img src="wallpapers/<?php echo $randomImages[0]; ?>" class="rounded pixel-corners-radius-10-px" />
+                        <img src="wallpapers/<?= $randomImages[0]; ?>" class="rounded pixel-corners-radius-10-px" />
                     </td>
                     <td>
-                        <img src="wallpapers/<?php echo $randomImages[1]; ?>" class="rounded pixel-corners-radius-10-px" />
+                        <img src="wallpapers/<?= $randomImages[1]; ?>" class="rounded pixel-corners-radius-10-px" />
                     </td>
                     <td>
-                        <img src="wallpapers/<?php echo $randomImages[2]; ?>" class="rounded pixel-corners-radius-10-px" />
+                        <img src="wallpapers/<?= $randomImages[2]; ?>" class="rounded pixel-corners-radius-10-px" />
                     </td>
                 </tr>
             </table>
-            <p></p>
+            <h3 class="pt-2">MinePaper.net is free and open source!</h3>
             <a href="downloads.php">
-                <h2>Download now</h2>
+                <h4>Install MinePaper.net</h4>
             </a>
         </div>
     </body>

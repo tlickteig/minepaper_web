@@ -3,6 +3,14 @@
     src: url(/font/MinecraftRegular.otf);
 }
 
+body {
+  font-family: Minecraft;
+}
+
+.dropdown-menu {
+  background: lightgrey;
+}
+
 h2 {
     font-family: Minecraft;
 }

@@ -1,6 +1,6 @@
 <?php 
     require_once "util/utilities.php";
-    
+
     // Get our active tabs
     $tabInfo = Constants::get_tab_info();
 
@@ -23,13 +23,20 @@
 <div class="tab-content">
 <?php 
     foreach ($tabInfo as $osType):
-        $isActiveClass = $osType["quickName"] == $activeOS ? "active show" : "";
+        $isActiveClass = $osType["quickName"] == $activeOS ? " active show" : "";
 ?>
-    <div role='tabpanel' class='tab-pane fade <?= $isActiveClass ?>' id='download-option-<?= $osType["quickName"] ?>' aria-labelledby='<?= $osType["quickName"] ?>-download-tab'>
-        <div class="d-grid gap-2 col-8 col-lg-6 mx-auto">
-            <a class="btn btn-outline-dark btn-lg" role="button" id='<?= $osType["quickName"] ?>-download-link' href='<?= $osType["releaseLink"] ?>' >
-                Download <?= Constants::$projectName ?> for <?= $osType["fancyName"] ?>
-            </a>
+    <div role='tabpanel' class='tab-pane fade<?= $isActiveClass ?>' id='download-option-<?= $osType["quickName"] ?>' aria-labelledby='<?= $osType["quickName"] ?>-download-tab'>
+        <div class="row pt-5">    
+            <div class="d-grid gap-2 col-8 col-lg-6 mx-auto">
+                <a class="btn btn-outline-dark btn-lg" role="button" id='<?= $osType["quickName"] ?>-download-link' href='<?= $osType["releaseLink"] ?>' target="_blank" rel="noreferrer noopener" >
+                    Install <?= Constants::$projectName ?> for <?= $osType["fancyName"] ?>
+                </a>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-12">
+                <p>Find <?= Constants::$projectName ?> for <?= $osType["fancyName"] ?> on <a href='<?= $osType["githubLink"] ?>'  target="_blank" rel="noreferrer noopener"> Github</a></p>
+            </div>
         </div>
     </div>
 <?php endforeach; ?>
