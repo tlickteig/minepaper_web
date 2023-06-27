@@ -29,7 +29,7 @@ class Constants {
         "regex" => "(Windows|Wince|Win)", 
         "quickName" => "windows", 
         "fancyName" => "Windows", 
-        "releaseLink" => "https://www.github.com/tlickteig/minepaper_uwp/releases/latest/download/minepaper.zip", 
+        "releaseLink" => "https://www.microsoft.com/store/apps/9NRDK6D5FCKP", 
         "githubLink" => "https://www.github.com/tlickteig/minepaper_uwp/releases/latest/"
     );
 
@@ -38,7 +38,7 @@ class Constants {
         "regex" => "(Mac)", 
         "quickName" => "mac", 
         "fancyName" => "MacOS", 
-        "releaseLink" => "https://www.github.com/tlickteig/minepaper_mac/releases/latest/download/minepaper.zip", 
+        "releaseLink" => "https://apps.apple.com/us/app/minepaper/id6450654431", 
         "githubLink" => "https://www.github.com/tlickteig/minepaper_mac/releases/latest/"
     );
 
