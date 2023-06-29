@@ -1,3 +1,6 @@
+<?php
+    define("PAGE_TITLE", "About MinePaper");
+?>
 <html>
     <?php require "partial/head.php"; ?>
     <body id="bdyMainWindow">

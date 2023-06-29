@@ -310,14 +310,37 @@ p {
 	font-weight: normal;
 }
 
-#tbImageGallery {
+#tbImageGalleryHoriz {
     width: 100%;
 }
 
-#tbImageGallery td {
+#tbImageGalleryHoriz td {
     padding: .5em;
 }
 
-#tbImageGallery img {
+#tbImageGalleryHoriz img {
     width: 100%;
+}
+
+#tbImageGalleryVert {
+  width: 100%;
+  display: none;
+}
+
+#tbImageGalleryVert td {
+  padding: .5em;
+  text-align: center;
+}
+
+#tbImageGalleryVert img {
+  width: 75%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #tbImageGalleryHoriz {
+      display: none;
+  }
+  #tbImageGalleryVert {
+      display: table;
+  }
 }

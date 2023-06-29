@@ -1,4 +1,6 @@
 <?php 
+    define("PAGE_TITLE", "Welcome to Minepaper.net!");
+
     require "util/utilities.php";
     $files = return_image_list_with_caching();
     $numberOfCarouselItems = 3;
@@ -16,7 +18,7 @@
         <div id="dvMainWindow" class="pixel-corners-radius-10-px-border-1px">
             <h2>Welcome to <?= Constants::$projectName ?>.net!</h2>
             <h5>Automatically rotate your desktop background between stunning Minecraft views.</h5>
-            <table id="tbImageGallery">
+            <table id="tbImageGalleryHoriz">
                 <tr>
                     <td>
                         <img src="wallpapers/<?= $randomImages[0]; ?>" class="rounded pixel-corners-radius-10-px" />
@@ -28,6 +30,23 @@
                         <img src="wallpapers/<?= $randomImages[2]; ?>" class="rounded pixel-corners-radius-10-px" />
                     </td>
                 </tr>
+            </table>
+            <table id="tbImageGalleryVert">
+            <tr>
+                <td>
+                    <img src="wallpapers/<?= $randomImages[0]; ?>" class="rounded pixel-corners-radius-10-px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="wallpapers/<?= $randomImages[1]; ?>" class="rounded pixel-corners-radius-10-px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="wallpapers/<?= $randomImages[2]; ?>" class="rounded pixel-corners-radius-10-px" />
+                </td>
+            </tr>
             </table>
             <h3 class="pt-2"><?= Constants::$projectName ?> is free and open source!</h3>
             <a href="downloads.php">

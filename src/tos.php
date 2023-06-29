@@ -1,3 +1,6 @@
+<?php
+    define("PAGE_TITLE", "Terms of Service");
+?>
 <html>
     <?php require "partial/head.php"; ?>
     <body id="bdyMainWindow">
