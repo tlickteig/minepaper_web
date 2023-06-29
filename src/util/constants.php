@@ -16,8 +16,8 @@ class Constants {
     public static function get_github_info() { 
         return array(
             Constants::$macArr,
-            Constants::$webArr,
-            Constants::$windowsArr
+            Constants::$windowsArr,
+            Constants::$webArr
         );
     }
 

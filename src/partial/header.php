@@ -1,5 +1,6 @@
 <?php 
     require_once('util/constants.php');
+    $githubInfo = Constants::get_github_info();
 ?>
 <header>
     <div id="dvHeader">
@@ -29,11 +30,14 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="sourceOptions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle Github source navigation">Github</a> 
                         <div class="dropdown-menu"  aria-labelledby="sourceOptions">
-                            <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_uwp/releases/latest" target="_blank" rel="noreferrer noopener">Windows</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_mac/releases/latest" target="_blank" rel="noreferrer noopener">Mac</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://github.com/tlickteig/minepaper_web/releases/latest" target="_blank" rel="noreferrer noopener">Web</a>
+                        <?php
+                            foreach ($githubInfo as $osItem) : 
+                        ?>
+                            <a class="dropdown-item" href="<?= $osItem["githubLink"] ?>" target="_blank" rel="noreferrer noopener"><?= $osItem["name"] ?></a>
+                        <?php if ($osItem != $githubInfo[array_key_last($githubInfo)]): ?>
+                            <div class='dropdown-divider'></div>
+                        <?php endif; ?>
+                        <?php endforeach; ?>
                         </div>
                     </li>
                 </ul>
