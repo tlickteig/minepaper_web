@@ -13,40 +13,33 @@
 ?>
 <html>
     <?php require "partial/head.php"; ?>
-    <body id="bdyMainWindow">
+    <body id="bdyMainWindow" class="container">
         <?php require "partial/header.php"; ?>
         <div id="dvMainWindow" class="pixel-corners-radius-10-px-border-1px">
             <h2>Welcome to <?= Constants::$projectName ?>.net!</h2>
             <h5>Automatically rotate your desktop background between stunning Minecraft views.</h5>
-            <table id="tbImageGalleryHoriz">
+            <table id="tbImageGalleryHoriz" class="d-none d-lg-table">
                 <tr>
+                    <?php 
+                        foreach($randomImages as $image): 
+                    ?>
                     <td>
-                        <img src="wallpapers/<?= $randomImages[0]; ?>" class="rounded pixel-corners-radius-10-px" />
+                        <img src="wallpapers/<?= $image; ?>" class="rounded pixel-corners-radius-10-px" />
                     </td>
-                    <td>
-                        <img src="wallpapers/<?= $randomImages[1]; ?>" class="rounded pixel-corners-radius-10-px" />
-                    </td>
-                    <td>
-                        <img src="wallpapers/<?= $randomImages[2]; ?>" class="rounded pixel-corners-radius-10-px" />
-                    </td>
+                    <?php endforeach; ?>
                 </tr>
             </table>
             <table id="tbImageGalleryVert">
-            <tr>
-                <td>
-                    <img src="wallpapers/<?= $randomImages[0]; ?>" class="rounded pixel-corners-radius-10-px" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="wallpapers/<?= $randomImages[1]; ?>" class="rounded pixel-corners-radius-10-px" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="wallpapers/<?= $randomImages[2]; ?>" class="rounded pixel-corners-radius-10-px" />
-                </td>
-            </tr>
+                
+                <?php 
+                    foreach($randomImages as $image): 
+                ?>
+                <tr>
+                    <td>
+                        <img src="wallpapers/<?= $image ?>" class="rounded pixel-corners-radius-10-px" />
+                    </td>
+                </tr>
+                <?php endforeach; ?>
             </table>
             <h3 class="pt-2"><?= Constants::$projectName ?> is free and open source!</h3>
             <a href="downloads.php">
