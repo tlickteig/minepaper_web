@@ -309,38 +309,3 @@ p {
 #dvHeader li a {
 	font-weight: normal;
 }
-
-#tbImageGalleryHoriz {
-    width: 100%;
-}
-
-#tbImageGalleryHoriz td {
-    padding: .5em;
-}
-
-#tbImageGalleryHoriz img {
-    width: 100%;
-}
-
-#tbImageGalleryVert {
-  width: 100%;
-  display: none;
-}
-
-#tbImageGalleryVert td {
-  padding: .5em;
-  text-align: center;
-}
-
-#tbImageGalleryVert img {
-  width: 75%;
-}
-
-@media only screen and (max-width: 1000px) {
-  #tbImageGalleryHoriz {
-      display: none;
-  }
-  #tbImageGalleryVert {
-      display: table;
-  }
-}

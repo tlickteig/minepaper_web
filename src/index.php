@@ -18,28 +18,16 @@
         <div id="dvMainWindow" class="pixel-corners-radius-10-px-border-1px">
             <h2>Welcome to <?= Constants::$projectName ?>.net!</h2>
             <h5>Automatically rotate your desktop background between stunning Minecraft views.</h5>
-            <table id="tbImageGalleryHoriz" class="d-none d-lg-table">
-                <tr>
+            <table id="tbImageGallery" class="">
+                <div class="d-table-row d-lg-table-cell">
                     <?php 
                         foreach($randomImages as $image): 
                     ?>
-                    <td>
-                        <img src="wallpapers/<?= $image; ?>" class="rounded pixel-corners-radius-10-px" />
-                    </td>
+                    <div class="d-table-row d-lg-table-cell">
+                        <img src="wallpapers/<?= $image; ?>" class="mb-3 mb-lg-0 container-fluid rounded pixel-corners-radius-10-px" />
+                    </div>
                     <?php endforeach; ?>
-                </tr>
-            </table>
-            <table id="tbImageGalleryVert">
-                
-                <?php 
-                    foreach($randomImages as $image): 
-                ?>
-                <tr>
-                    <td>
-                        <img src="wallpapers/<?= $image ?>" class="rounded pixel-corners-radius-10-px" />
-                    </td>
-                </tr>
-                <?php endforeach; ?>
+                </div>
             </table>
             <h3 class="pt-2"><?= Constants::$projectName ?> is free and open source!</h3>
             <a href="downloads.php">
