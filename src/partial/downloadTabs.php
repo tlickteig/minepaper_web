@@ -7,6 +7,17 @@
     // Check for a quickName matching the OS returned from the User Agent. Use default if not found
     $activeOS = get_os_name("quickName") ?? Constants::$defaultTabName;
 ?>
+<style> 
+.nav-link {
+    --bs-nav-link-color: var(--bs-black);
+    border: var(--bs-nav-tabs-border-width) solid !important;
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--bs-gray-200);
+}
+</style>
 
 <ul class="nav nav-tabs" id="releaseTypeTab" role="tablist">
 <?php 
