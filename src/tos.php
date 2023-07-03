@@ -1,5 +1,6 @@
 <?php
-    define("PAGE_TITLE", "Terms of Service");
+    define("PAGE_TITLE", "MinePaper.net Terms of Service");
+    define("PAGE_DESC", "The terms of service that guide the use of MinePaper.net.");
 ?>
 <html>
     <?php require "partial/head.php"; ?>

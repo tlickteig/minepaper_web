@@ -1,5 +1,6 @@
 <?php 
-    define("PAGE_TITLE", "Welcome to Minepaper.net!");
+    define("PAGE_TITLE", "Welcome to MinePaper.net!");
+    define("PAGE_DESC", "MinePaper is an application that automatically changes the desktop background between many stunning Minecraft screenshots.");
 
     require "util/utilities.php";
     $files = return_image_list_with_caching();

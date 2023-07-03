@@ -1,5 +1,6 @@
 <?php
     define("PAGE_TITLE", "About MinePaper");
+    define("PAGE_DESC", "Learn more about MinePaper and its creators.");
 ?>
 <html>
     <?php require "partial/head.php"; ?>

@@ -1,5 +1,6 @@
 <?php
-    define("PAGE_TITLE", "Privacy Policy");
+    define("PAGE_TITLE", "MinePaper.net Privacy Policy");
+    define("PAGE_DESC", "The privacy policy that guides the use of MinePaper.net.");
 ?>
 <html>
     <?php require "partial/head.php"; ?>
