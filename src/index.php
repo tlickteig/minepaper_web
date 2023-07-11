@@ -25,7 +25,7 @@
                         foreach($randomImages as $image): 
                     ?>
                     <div class="d-table-row d-lg-table-cell">
-                        <img src="wallpapers/<?= $image; ?>" alt="Example Minecraft landscape option" class="mb-3 mb-lg-0 container-fluid rounded pixel-corners-radius-10-px" />
+                        <img src="wallpapers/<?= $image; ?>" alt="Example Minecraft landscape option" class="mb-3 mb-lg-0 container-fluid rounded pixel-corners-radius-10-px px-0" />
                     </div>
                     <?php endforeach; ?>
                 </div>
