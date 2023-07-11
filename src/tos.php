@@ -2,7 +2,7 @@
     define("PAGE_TITLE", "MinePaper.net Terms of Service");
     define("PAGE_DESC", "The terms of service that guide the use of MinePaper.net.");
 ?>
-<html>
+<html lang="en-US">
     <?php require "partial/head.php"; ?>
     <body id="bdyMainWindow" class="container">
         <?php require "partial/header.php"; ?>

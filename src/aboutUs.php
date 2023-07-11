@@ -2,7 +2,7 @@
     define("PAGE_TITLE", "About MinePaper");
     define("PAGE_DESC", "Learn more about MinePaper and its creators.");
 ?>
-<html>
+<html lang="en-US">
     <?php require "partial/head.php"; ?>
     <body id="bdyMainWindow" class="container">
         <?php require "partial/header.php"; ?>

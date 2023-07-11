@@ -12,7 +12,7 @@
     shuffle($files);
     $randomImages = array_slice($files, 0, $numberOfCarouselItems);
 ?>
-<html>
+<html lang="en-US">
     <?php require "partial/head.php"; ?>
     <body id="bdyMainWindow" class="container">
         <?php require "partial/header.php"; ?>
