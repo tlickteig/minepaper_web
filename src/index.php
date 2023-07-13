@@ -18,7 +18,9 @@
         <?php require "partial/header.php"; ?>
         <div id="dvMainWindow" class="pixel-corners-radius-10-px-border-1px">
             <h2>Welcome to <?= Constants::$projectName ?>.net!</h2>
-            <h5>Automatically rotate your desktop background between stunning Minecraft views.</h5>
+            <div style="font-size: 1.25rem;">
+                Automatically rotate your desktop background between stunning Minecraft views.
+            </div>
             <table id="tbImageGallery" class="">
                 <div class="d-table-row d-lg-table-cell">
                     <?php 
