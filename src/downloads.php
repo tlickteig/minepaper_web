@@ -7,10 +7,12 @@
     <body id="bdyMainWindow" class="container">
         <?php require "partial/header.php"; ?>
         <div id="dvMainWindow" class="pixel-corners-radius-10-px-border-1px">
-            <div id="downloadWelcome">
-                
+            <div id="downloadWelcome" class="visually-hidden">
+                <h1>Install <?= $projectName ?></h1>
             </div>
-            <?php require("partial/downloadTabs.php") ?> 
+            <div role="navigation"> 
+                <?php require("partial/downloadTabs.php") ?> 
+            </div>
         </div>
     <body>
 </html>
