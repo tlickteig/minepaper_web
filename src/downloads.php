@@ -6,7 +6,5 @@ define("PAGE_DESC", "Find where to install MinePaper from. Supported operating s
 <div id="dvWelcome" class="visually-hidden">
     <h1>Install <?= $projectName ?></h1>
 </div>
-<div role="navigation">
-    <?php require("partial/downloadTabs.php") ?>
-</div>
+<?php require "partial/downloadTabs.php" ?>
 <?php require "common/pageBottom.php" ?>

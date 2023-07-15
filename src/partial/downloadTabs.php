@@ -19,18 +19,20 @@ $activeOS = get_os_name("quickName") ?? Constants::$defaultTabName;
     }
 </style>
 
-<ul class="nav nav-tabs" id="releaseTypeTab" role="tablist">
-    <?php
-    foreach ($tabInfo as $osType) :
-        $isActiveClass = $osType["quickName"] == $activeOS ? "active" : "";
-    ?>
-        <li class="nav-item" role="presentation">
-            <button type="button" role="tab" data-bs-toggle="tab" class='nav-link <?= $isActiveClass ?>' data-bs-target='#download-option-<?= $osType["quickName"] ?>' id='<?= $osType["quickName"] ?>-download-tab' aria-controls="download-option-<?= $osType['quickName'] ?>">
-                <?= $osType["fancyName"] ?>
-            </button>
-        </li>
-    <?php endforeach; ?>
-</ul>
+<div role="navigation">
+    <ul class="nav nav-tabs" id="releaseTypeTab" role="tablist">
+        <?php
+        foreach ($tabInfo as $osType) :
+            $isActiveClass = $osType["quickName"] == $activeOS ? "active" : "";
+        ?>
+            <li class="nav-item" role="presentation">
+                <button type="button" role="tab" data-bs-toggle="tab" class='nav-link <?= $isActiveClass ?>' data-bs-target='#download-option-<?= $osType["quickName"] ?>' id='<?= $osType["quickName"] ?>-download-tab' aria-controls="download-option-<?= $osType['quickName'] ?>">
+                    <?= $osType["fancyName"] ?>
+                </button>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
 <div class="tab-content">
     <?php
     foreach ($tabInfo as $osType) :
