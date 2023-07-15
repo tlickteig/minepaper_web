@@ -3,7 +3,7 @@ define("PAGE_TITLE", "About MinePaper");
 define("PAGE_DESC", "Learn more about MinePaper and its creators.");
 ?>
 <?php require "common/pageTop.php" ?>
-<div class="col-lg-8 mx-auto">
+<div class="col-lg-10 mx-auto">
     <div class="" id="dvWelcome">
         <h2>About Us</h2>
     </div>

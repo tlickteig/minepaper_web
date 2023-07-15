@@ -18,7 +18,7 @@ $randomImages = array_slice($files, 0, $numberOfCarouselItems);
     <h2>Welcome to <?= Constants::$projectName ?>.net!</h2>
 </div>
 
-<div style="font-size: 1.25rem;">
+<div class="col-lg-10 mx-auto" style="font-size: 1.25rem;">
     Automatically rotate your desktop background between stunning Minecraft views.
 </div>
 <div id="tbImageGallery" class="py-4" role="table">
