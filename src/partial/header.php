@@ -20,6 +20,9 @@
                         <a class="nav-link" href="downloads.php">Install</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="upload.php">Upload</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="aboutUs.php">About</a>
                     </li>
                     <li class="nav-item">
