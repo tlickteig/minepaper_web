@@ -49,4 +49,44 @@
         if (preg_match('(Win)', $user_agent)) return 'Windows';
         return null;
     }
+
+    function is_page_https() {
+        if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+            return true; 
+        return false;
+    }
+
+    function get_site_host() {
+        // Append the host(domain name, ip) to the URL.   
+        $host = $_SERVER['HTTP_HOST'];
+        return $host;
+    }
+
+    function get_requested_resource() {
+        // Append the requested resource location to the URL   
+        $request = $_SERVER['REQUEST_URI'];
+        return $request;
+    }
+
+    function get_current_url() {
+        $https = is_page_https() ? "https://" : "http://";
+        $host = get_site_host();
+        $request = get_requested_resource();  
+        $url = $https . $host . $request;
+        return $url;
+    }
+
+    function get_returned_resource() {
+        $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
+        return $curPageName;
+    }
+
+    function get_cannonical_url() {
+        $url = "https://" . get_site_host();
+        // Index.php is not canonical.
+        if (get_returned_resource() == "index.php") {
+            return $url;
+        }
+        return $url . "/" . get_returned_resource();
+    }
 ?>

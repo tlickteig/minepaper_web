@@ -6,6 +6,10 @@
     if(!defined("PAGE_DESC")) {
         define("PAGE_DESC", "MinePaper.net");
     }
+
+    require_once("util/utilities.php");
+    $canonicalUrl = get_cannonical_url();
+    $currentUrl = get_current_url();
 ?>
 
 <head>
@@ -16,5 +20,12 @@
     <script src="./lib/bootstrap/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/standard.css" />
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <?php 
+    if ($canonicalUrl != $currentUrl):
+    ?>
+    <link rel="canonical" href="<?= $canonicalUrl ?>" />
+    <?php 
+    endif;
+    ?>
 </head>
