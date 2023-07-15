@@ -3,7 +3,7 @@ define("PAGE_TITLE", "Install MinePaper");
 define("PAGE_DESC", "Find where to install MinePaper from. Supported operating systems include MacOS and Windows.");
 ?>
 <?php require "common/pageTop.php" ?>
-<div id="downloadWelcome" class="visually-hidden">
+<div id="dvWelcome" class="visually-hidden">
     <h1>Install <?= $projectName ?></h1>
 </div>
 <div role="navigation">
