@@ -6,18 +6,26 @@ $output_message = "";
 $target_dir = "../uploads/";
 
 if (isset($_POST["submit"])) {
-    if (!file_exists($target_dir)) {
-        mkdir($target_dir, 0777);
+
+    $is_acpu_available = function_exists('apcu_enabled') && apcu_enabled();
+    if (!$is_acpu_available) {
+        $output_message = "File failed to upload (code 11)";
     }
 
-    $uploadfile = $target_dir . basename($_FILES['uploadedFile']['name']);
-    if (move_uploaded_file($_FILES['uploadedFile']['tmp_name'], $uploadfile)) {
-        $output_message = "File upload successfully";
-    } else {
-        $output_message = "File file failed to upload";
-    }
+    
 
-    print_r($_FILES);
+    if (empty($output_message)) {
+        if (!file_exists($target_dir)) {
+            mkdir($target_dir, 0777);
+        }
+
+        $uploadfile = $target_dir . basename($_FILES['uploadedFile']['name']);
+        if (move_uploaded_file($_FILES['uploadedFile']['tmp_name'], $uploadfile)) {
+            $output_message = "File upload successfully";
+        } else {
+            $output_message = "File failed to upload (code 15)";
+        }
+    }
 }
 ?>
 

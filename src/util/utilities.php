@@ -7,8 +7,8 @@
         $cache_ttl_hours = 3;
 
         if ($is_acpu_available) {
-            if (apcu_exists("FILE_LIST")) {
-                $files = apcu_fetch("FILE_LIST");
+            if (apcu_exists(Constants::$fileListCacheKey)) {
+                $files = apcu_fetch(onstants::$fileListCacheKey);
             }
         }
 
@@ -28,7 +28,7 @@
             }
 
             if ($is_acpu_available) {
-                apcu_store("FILE_LIST", $files, 3600 * $cache_ttl_hours);
+                apcu_store(onstants::$fileListCacheKey, $files, 3600 * $cache_ttl_hours);
             }
         }
 
