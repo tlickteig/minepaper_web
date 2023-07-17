@@ -1,4 +1,8 @@
 <?php
+require_once("util/utilities.php");
+require_once("util/constants.php");
+require_once("util/rateLimiting.php");
+
 define("PAGE_TITLE", "Upload an image to Minepaper");
 define("PAGE_DESC", "Upload your own image to add to the ever-growing gallery of Minecraft landscapes");
 
@@ -9,19 +13,28 @@ if (isset($_POST["submit"])) {
 
     $is_acpu_available = function_exists('apcu_enabled') && apcu_enabled();
     if (!$is_acpu_available) {
-        $output_message = "File failed to upload (code 11)";
+        $output_message = "File uploading is currently unavailable. Please try again later.";
     }
 
     if (empty($output_message)) {
         if (!file_exists($target_dir)) {
             mkdir($target_dir, 0777);
         }
+    }
 
+    if (empty($output_message)) {
+        increase_rate_limiting_category(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitTime);
+        if (has_rate_limiting_exceeded_threshold(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitThreshold)) {
+            $output_message = "You have uploaded too many files. Please try again later.";
+        }
+    }
+
+    if (empty($output_message)) {
         $uploadfile = $target_dir . basename($_FILES['uploadedFile']['name']);
         if (move_uploaded_file($_FILES['uploadedFile']['tmp_name'], $uploadfile)) {
             $output_message = "File upload successfully";
         } else {
-            $output_message = "File failed to upload (code 15)";
+            $output_message = "File failed to upload. Please try again.";
         }
     }
 }

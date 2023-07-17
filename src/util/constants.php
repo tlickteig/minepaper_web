@@ -2,6 +2,10 @@
 class Constants {
     public static $fileListCacheKey = "FILE_LIST";
 
+    public static $fileUploadRateLimitingCacheKey = "FILE_UPLOAD";
+    public static $fileUploadRateLimitThreshold = 10;
+    public static $fileUploadRateLimitTime = 3600;
+
     public static $projectName = "MinePaper";
     // The default active download tab if user agent can not be found. Match with a "quickName"
     public static $defaultTabName = "windows";
