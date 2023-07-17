@@ -8,7 +8,7 @@
 
         if ($is_acpu_available) {
             if (apcu_exists(Constants::$fileListCacheKey)) {
-                $files = apcu_fetch(onstants::$fileListCacheKey);
+                $files = apcu_fetch(Constants::$fileListCacheKey);
             }
         }
 
@@ -28,7 +28,7 @@
             }
 
             if ($is_acpu_available) {
-                apcu_store(onstants::$fileListCacheKey, $files, 3600 * $cache_ttl_hours);
+                apcu_store(Constants::$fileListCacheKey, $files, 3600 * $cache_ttl_hours);
             }
         }
 
@@ -88,5 +88,9 @@
             return $url;
         }
         return $url . "/" . get_returned_resource();
+    }
+
+    function return_client_ip_address() {
+        return $_SERVER["REMOTE_ADDR"];
     }
 ?>

@@ -12,8 +12,6 @@ if (isset($_POST["submit"])) {
         $output_message = "File failed to upload (code 11)";
     }
 
-    
-
     if (empty($output_message)) {
         if (!file_exists($target_dir)) {
             mkdir($target_dir, 0777);
