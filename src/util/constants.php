@@ -38,7 +38,7 @@ class Constants {
         "quickName" => "windows", 
         "fancyName" => "Windows", 
         "releaseLink" => "https://www.microsoft.com/store/apps/9NRDK6D5FCKP", 
-        "githubLink" => "https://www.github.com/tlickteig/minepaper_uwp/releases/latest/"
+        "githubLink" => "ms-windows-store://pdp/?productid=9NRDK6D5FCKP"
     );
 
     public static $macArr = array(
