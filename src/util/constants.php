@@ -37,8 +37,8 @@ class Constants {
         "regex" => "(Windows|Wince|Win)", 
         "quickName" => "windows", 
         "fancyName" => "Windows", 
-        "releaseLink" => "https://www.microsoft.com/store/apps/9NRDK6D5FCKP", 
-        "githubLink" => "ms-windows-store://pdp/?productid=9NRDK6D5FCKP"
+        "releaseLink" => "ms-windows-store://pdp/?productid=9NRDK6D5FCKP", 
+        "githubLink" => "https://www.github.com/tlickteig/minepaper_uwp/releases/latest/"
     );
 
     public static $macArr = array(
