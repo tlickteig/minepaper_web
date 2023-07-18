@@ -23,8 +23,8 @@ if (isset($_POST["submit"])) {
     }
 
     if (empty($output_message)) {
-        increase_rate_limiting_category(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitTime);
-        if (has_rate_limiting_exceeded_threshold(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitThreshold)) {
+        RateLimiting::increase_rate_limiting_category(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitTime);
+        if (RateLimiting::has_rate_limiting_exceeded_threshold(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitThreshold)) {
             $output_message = "You have uploaded too many files. Please try again later.";
         }
     }
