@@ -35,6 +35,10 @@
         return $files;
     }
 
+    function return_number_of_images_in_directory($directory) {
+        return sizeof(scandir($directory));
+    }
+
     function get_user_agent() {
         return $_SERVER["HTTP_USER_AGENT"] ?? null;
     }

@@ -30,6 +30,21 @@ if (isset($_POST["submit"])) {
     }
 
     if (empty($output_message)) {
+        $target_file = $target_dir . basename($_FILES["uploadedFile"]["name"]);
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+            $output_message = "Only .png and .jpeg files are allowed";
+        }
+    }
+
+    if (empty($output_message)) {
+        $number_of_images_in_uploads = return_number_of_images_in_directory($target_dir);
+        if ($number_of_images_in_uploads >= Constants::$fileUploadMaxImagesInUploadDirectory) {
+            $output_message = "File uploading is currently not available. Please try again later.";
+        }
+    }
+
+    if (empty($output_message)) {
         $uploadfile = $target_dir . basename($_FILES['uploadedFile']['name']);
         if (move_uploaded_file($_FILES['uploadedFile']['tmp_name'], $uploadfile)) {
             $output_message = "File upload successfully";
