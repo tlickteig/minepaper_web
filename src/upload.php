@@ -23,16 +23,35 @@ if (isset($_POST["submit"])) {
     }
 
     if (empty($output_message)) {
-        increase_rate_limiting_category(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitTime);
-        if (has_rate_limiting_exceeded_threshold(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitThreshold)) {
+        RateLimiting::increase_rate_limiting_category(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitTime);
+        if (RateLimiting::has_rate_limiting_exceeded_threshold(Constants::$fileUploadRateLimitingCacheKey, Constants::$fileUploadRateLimitThreshold)) {
             $output_message = "You have uploaded too many files. Please try again later.";
+        }
+    }
+
+    if (empty($output_message)) {
+        $target_file = $target_dir . basename($_FILES["uploadedFile"]["name"]);
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+            $output_message = "Only .png and .jpeg files are allowed";
+        }
+    }
+
+    if ($_FILES["uploadedFile"]["size"] > Constants::$fileUploadMaxSizeBytes) {
+        $output_message = "Your file is too large. Please try a different one.";
+      }
+
+    if (empty($output_message)) {
+        $number_of_images_in_uploads = return_number_of_images_in_directory($target_dir);
+        if ($number_of_images_in_uploads >= Constants::$fileUploadMaxImagesInUploadDirectory) {
+            $output_message = "File uploading is currently not available. Please try again later.";
         }
     }
 
     if (empty($output_message)) {
         $uploadfile = $target_dir . basename($_FILES['uploadedFile']['name']);
         if (move_uploaded_file($_FILES['uploadedFile']['tmp_name'], $uploadfile)) {
-            $output_message = "File upload successfully";
+            $output_message = "File uploaded successfully";
         } else {
             $output_message = "File failed to upload. Please try again.";
         }

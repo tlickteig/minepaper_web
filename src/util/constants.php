@@ -5,6 +5,8 @@ class Constants {
     public static $fileUploadRateLimitingCacheKey = "FILE_UPLOAD";
     public static $fileUploadRateLimitThreshold = 10;
     public static $fileUploadRateLimitTime = 3600;
+    public static $fileUploadMaxImagesInUploadDirectory = 100;
+    public static $fileUploadMaxSizeBytes = 5000000;
 
     public static $projectName = "MinePaper";
     // The default active download tab if user agent can not be found. Match with a "quickName"
@@ -35,7 +37,7 @@ class Constants {
         "regex" => "(Windows|Wince|Win)", 
         "quickName" => "windows", 
         "fancyName" => "Windows", 
-        "releaseLink" => "https://www.microsoft.com/store/apps/9NRDK6D5FCKP", 
+        "releaseLink" => "ms-windows-store://pdp/?productid=9NRDK6D5FCKP", 
         "githubLink" => "https://www.github.com/tlickteig/minepaper_uwp/releases/latest/"
     );
 
