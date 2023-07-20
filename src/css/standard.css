@@ -310,6 +310,7 @@ p {
 
 #dvHeader li a {
 	font-weight: normal;
+  text-wrap: nowrap;
 }
 
 .nav-tabs {
