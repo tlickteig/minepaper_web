@@ -61,11 +61,10 @@ if (isset($_POST["submit"])) {
 
 <?php require "common/pageTop.php" ?>
 <h2>Upload an image to <?= Constants::$projectName ?>.net</h2>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="uploadedFile">
+<form action="upload.php" method="post" enctype="multipart/form-data" class="pt-5">
+    <input type="file" name="uploadedFile" class="pb-5">
     <br />
-    <p></p>
-    <input type="submit" value="Upload Image" name="submit">
-    <p><?= $output_message ?></p>
+    <input type="submit" value="Upload Image" name="submit" class="py-1">
+    <p class="py-2"><?= $output_message ?></p>
 </form>
 <?php require "common/pageBottom.php" ?>
