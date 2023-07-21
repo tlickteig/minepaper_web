@@ -1,6 +1,6 @@
-<?php 
-    require_once('util/constants.php');
-    $githubInfo = Constants::get_github_info();
+<?php
+require_once('util/constants.php');
+$githubInfo = Constants::get_github_info();
 ?>
 <header>
     <div id="dvHeader">
@@ -13,35 +13,35 @@
 
             <div class="collapse navbar-collapse" id="siteNav">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home</a>
+                    <!-- <li class="nav-item active">
+                            <a class="nav-link navbar-text" href="index.php">Home</a>
+                        </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link navbar-text" href="downloads.php">Install</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="downloads.php">Install</a>
+                        <a class="nav-link navbar-text" href="upload.php">Upload</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="upload.php">Upload</a>
+                        <a class="nav-link navbar-text" href="aboutUs.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="aboutUs.php">About</a>
+                        <a class="nav-link navbar-text" href="tos.php">Terms of Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tos.php">Terms of Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="privacyPolicy.php">Privacy Policy</a>
+                        <a class="nav-link navbar-text" href="privacyPolicy.php">Privacy Policy</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="sourceOptions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle Github source navigation">Github</a> 
-                        <div class="dropdown-menu"  aria-labelledby="sourceOptions">
-                        <?php
-                            foreach ($githubInfo as $osItem) : 
-                        ?>
-                            <a class="dropdown-item" href="<?= $osItem["githubLink"] ?>" target="_blank" rel="noreferrer noopener"><?= $osItem["name"] ?></a>
-                        <?php if ($osItem != $githubInfo[array_key_last($githubInfo)]): ?>
-                            <div class='dropdown-divider'></div>
-                        <?php endif; ?>
-                        <?php endforeach; ?>
+                        <a class="nav-link dropdown-toggle navbar-text" href="#" id="sourceOptions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle Github source navigation">Github</a>
+                        <div class="dropdown-menu" aria-labelledby="sourceOptions">
+                            <?php
+                            foreach ($githubInfo as $osItem) :
+                            ?>
+                                <a class="dropdown-item" href="<?= $osItem["githubLink"] ?>" target="_blank" rel="noreferrer noopener"><?= $osItem["name"] ?></a>
+                                <?php if ($osItem != $githubInfo[array_key_last($githubInfo)]) : ?>
+                                    <div class='dropdown-divider'></div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
                         </div>
                     </li>
                 </ul>

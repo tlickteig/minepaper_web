@@ -310,9 +310,12 @@ p {
 
 #dvHeader li a {
 	font-weight: normal;
-  text-wrap: nowrap;
 }
 
 .nav-tabs {
   --bs-nav-tabs-link-active-bg: transparent;
+}
+
+.main-text {
+  padding-top: 1rem;
 }
