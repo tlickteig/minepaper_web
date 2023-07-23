@@ -20,6 +20,9 @@ $githubInfo = Constants::get_github_info();
                         <a class="nav-link navbar-text" href="downloads.php">Install</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link navbar-text" href="gallery.php">Gallery</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link navbar-text" href="upload.php">Upload</a>
                     </li>
                     <li class="nav-item">
