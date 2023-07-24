@@ -29,7 +29,7 @@ $githubInfo = Constants::get_github_info();
                         <a class="nav-link navbar-text" href="aboutUs.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="tos.php">Terms of Service</a>
+                        <a class="nav-link navbar-text" href="tos.php">ToS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navbar-text" href="privacyPolicy.php">Privacy Policy</a>

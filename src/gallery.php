@@ -1,8 +1,8 @@
 <?php
     require_once "util/utilities.php";
 
-    define("PAGE_TITLE", "Minepaper.net image gallery");
-    define("PAGE_DESC", "View the beautiful Minecraft landscapes that have been captured.");
+    define("PAGE_TITLE", "Minepaper.net wallpaper gallery");
+    define("PAGE_DESC", "View the beautiful Minecraft wallpapers that we have in store.");
     $image_list_json = json_encode(return_image_list_with_caching());
 ?>
 
@@ -45,17 +45,24 @@
         overflow: auto;
         text-align: center !important;
     }
+
+    #dvImageContainer {
+        overflow: auto;
+        margin: 0 auto !important;
+        padding: 1em;
+    }
 </style>
 
 <script>
     function mainWindowTemplate(data) {
-        var html = "";
+        var html = "<div id='dvImageContainer'>";
         $.each(data, function(index, item) {
             html += '<div class="gallery">';
             html += '<a target="_blank" href="https://cdn.minepaper.net/' + item + '">';
             html += '<img src="https://cdn.minepaper.net/' + item + '" class="pixel-corners-radius-10-px px-0">';
             html += '</a></div>';
         });
+        html += "</div>";
 
         return html;
     }
