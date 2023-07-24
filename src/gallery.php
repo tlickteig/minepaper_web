@@ -60,33 +60,6 @@
         return html;
     }
 
-    function doPagination() {
-        if ($(document).width() > 582) {
-            $('#dvPagination').pagination({
-                dataSource: imageList,
-                pageSize: 15,
-                showPrevious: false,
-                showNext: false,
-                callback: function(data, pagination) {
-                    var html = mainWindowTemplate(data);
-                    $("#dvImageGallery").html(html);
-                }
-            });
-        }
-        else {
-            $('#dvPagination').pagination({
-                dataSource: imageList,
-                pageSize: 5,
-                showPageNumbers: false,
-                showNavigator: true,
-                callback: function(data, pagination) {
-                    var html = mainWindowTemplate(data);
-                    $("#dvImageGallery").html(html);
-                }
-            });
-        }
-    }
-
     var imageList = <?php echo $image_list_json; ?>;
     var imagesPerPage = 15;
     var imagePages = [];
@@ -97,13 +70,17 @@
     }
 
     $(document).ready(function() {
-        doPagination();
+        $('#dvPagination').pagination({
+            dataSource: imageList,
+            pageSize: 15,
+            showPrevious: false,
+            showNext: false,
+            callback: function(data, pagination) {
+                var html = mainWindowTemplate(data);
+                $("#dvImageGallery").html(html);
+            }
+        });
     });
-
-    $(window).on("resize", function() {
-        doPagination();
-    });
-
 </script>
 
 <div class="col-lg-10 mx-auto">
