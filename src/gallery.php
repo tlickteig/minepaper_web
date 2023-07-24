@@ -9,12 +9,6 @@
 <?php require "common/pageTop.php" ?>
 
 <style>
-    div.gallery {
-        margin: 5px;
-        float: left;
-        width: 170px;
-    }
-
     div.gallery img {
         width: 100%;
         height: auto;
@@ -32,11 +26,6 @@
         text-align: center !important;
     }
 
-    .gallery {
-        margin-right: 0 auto !important;
-        margin-left: 0 auto !important;
-    }
-
     .paginationjs-pages {
         margin: 0 auto !important;
     }
@@ -49,15 +38,14 @@
     #dvImageContainer {
         overflow: auto;
         margin: 0 auto !important;
-        padding: 1em;
     }
 </style>
 
 <script>
     function mainWindowTemplate(data) {
-        var html = "<div id='dvImageContainer'>";
+        var html = "<div id='dvImageContainer' class='row'>";
         $.each(data, function(index, item) {
-            html += '<div class="gallery">';
+            html += '<div class="gallery px-3 py-3 col-12 col-md-6 col-lg-4">';
             html += '<a target="_blank" href="https://cdn.minepaper.net/' + item + '">';
             html += '<img src="https://cdn.minepaper.net/' + item + '" class="pixel-corners-radius-10-px px-0">';
             html += '</a></div>';
@@ -90,7 +78,7 @@
     });
 </script>
 
-<div class="col-lg-10 mx-auto">
+<div class="container">
     <h2>Wallpaper Gallery</h2>
     <div id ="dvPagination">
     </div>
