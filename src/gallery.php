@@ -16,16 +16,73 @@
         height: auto;
     }
 
-    div.desc {
-        padding: 15px;
-        text-align: center;
+    .active a {
+        background-color: black !important;
     }
+
+    .paginationjs-nav {
+        font-family: Minecraft !important;
+    }
+
+    .paginationjs {
+        text-align: center !important;
+    }
+
+    .gallery {
+        margin-right: 0 auto !important;
+        margin-left: 0 auto !important;
+    }
+
+    .paginationjs-pages {
+        margin: 0 auto !important;
+    }
+
     #dvImageGallery {
         overflow: auto;
+        text-align: center !important;
     }
 </style>
 
 <script>
+    function mainWindowTemplate(data) {
+        var html = "";
+        $.each(data, function(index, item) {
+            html += '<div class="gallery">';
+            html += '<a target="_blank" href="/wallpapers/' + item + '">';
+            html += '<img src="/wallpapers/' + item + '" class="pixel-corners-radius-10-px px-0">';
+            html += '</a></div>';
+        });
+
+        return html;
+    }
+
+    function doPagination() {
+        if ($(document).width() > 582) {
+            $('#dvPagination').pagination({
+                dataSource: imageList,
+                pageSize: 15,
+                showPrevious: false,
+                showNext: false,
+                callback: function(data, pagination) {
+                    var html = mainWindowTemplate(data);
+                    $("#dvImageGallery").html(html);
+                }
+            });
+        }
+        else {
+            $('#dvPagination').pagination({
+                dataSource: imageList,
+                pageSize: 5,
+                showPageNumbers: false,
+                showNavigator: true,
+                callback: function(data, pagination) {
+                    var html = mainWindowTemplate(data);
+                    $("#dvImageGallery").html(html);
+                }
+            });
+        }
+    }
+
     var imageList = <?php echo $image_list_json; ?>;
     var imagesPerPage = 15;
     var imagePages = [];
@@ -35,34 +92,22 @@
         imagePages.push(chunk);
     }
 
-    var html = "";
-    for (let i = 0; i < imagePages[0].length; i += 1) {
-        var imageName = imagePages[0][i];
+    $(document).ready(function() {
+        doPagination();
+    });
 
-        html += '<div class="gallery">';
-        html += '<a target="_blank" href="/wallpapers/' + imageName + '">';
-        html += '<img src="/wallpapers/' + imageName + '>';
-        html += '</a></div>';
-    }
-    $('#dvImageGallery').html(html);
-    console.log(html);
+    $(window).on("resize", function() {
+        doPagination();
+    });
 
 </script>
 
 <div class="col-lg-10 mx-auto">
     <h2>Wallpaper Gallery</h2>
-    <div id="dvImageGallery" class="py-4" role="table">
-        <!--<div class="gallery">
-            <a target="_blank" href="/wallpapers/2023-06-19_20.28.40.png">
-                <img src="/wallpapers/2023-06-19_20.28.40.png" class="pixel-corners-radius-10-px px-0" alt="Cinque Terre" width="600" height="400">
-            </a>
-        </div>
-        
-        <div class="gallery">
-            <a target="_blank" href="/wallpapers/2023-06-19_20.28.40.png">
-                <img src="/wallpapers/2023-06-19_20.28.40.png" alt="Forest" width="600" height="400">
-            </a>
-        </div>-->
+    <div id ="dvPagination">
+    </div>
+    <br />
+    <div id="dvImageGallery">
     </div>
 </div>
 
