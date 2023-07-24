@@ -1,7 +1,7 @@
 import os
 
 DOWNLOAD_DIRECTORY = "C:\\Repos\\minepaper_web\\src\\wallpapers"
-WALLPAPERS_PATH = "https://minepaper.net/wallpapers"
+WALLPAPERS_PATH = "https://cdn.minepaper.net"
 
 
 def main():
