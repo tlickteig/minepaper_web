@@ -11,7 +11,7 @@ def main():
 
     for image in image_list:
         output_lines.append("<url>")
-        #output_lines.append("\t<loc>https://minepaper.net</loc>")
+        output_lines.append("\t<loc>https://minepaper.net/gallery.php</loc>")
         output_lines.append("\t<image:image>")
         output_lines.append(f"\t\t<image:loc>{WALLPAPERS_PATH}/{image}</image:loc>")
         output_lines.append("\t</image:image>")
