@@ -10,12 +10,9 @@ def main():
     output_lines = []
 
     for image in image_list:
-        output_lines.append("<url>")
-        output_lines.append("\t<loc>https://minepaper.net/gallery.php</loc>")
-        output_lines.append("\t<image:image>")
-        output_lines.append(f"\t\t<image:loc>{WALLPAPERS_PATH}/{image}</image:loc>")
-        output_lines.append("\t</image:image>")
-        output_lines.append("</url>")
+        output_lines.append("<image:image>")
+        output_lines.append(f"\t<image:loc>{WALLPAPERS_PATH}/{image}</image:loc>")
+        output_lines.append("</image:image>")
 
     for line in output_lines:
         print(line)
