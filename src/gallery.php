@@ -1,8 +1,12 @@
-<?php require "common/pageTop.php" ?>
-
 <?php
+    require_once "util/utilities.php";
+
+    define("PAGE_TITLE", "Minepaper.net image gallery");
+    define("PAGE_DESC", "View the beautiful Minecraft landscapes that have been captured.");
     $image_list_json = json_encode(return_image_list_with_caching());
 ?>
+
+<?php require "common/pageTop.php" ?>
 
 <style>
     div.gallery {
@@ -48,8 +52,8 @@
         var html = "";
         $.each(data, function(index, item) {
             html += '<div class="gallery">';
-            html += '<a target="_blank" href="/wallpapers/' + item + '">';
-            html += '<img src="/wallpapers/' + item + '" class="pixel-corners-radius-10-px px-0">';
+            html += '<a target="_blank" href="https://cdn.minepaper.net/' + item + '">';
+            html += '<img src="https://cdn.minepaper.net/' + item + '" class="pixel-corners-radius-10-px px-0">';
             html += '</a></div>';
         });
 
