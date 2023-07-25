@@ -14,16 +14,19 @@
 
         if (count($files) == 0) {
 
-            $temp_files = glob($_SERVER['DOCUMENT_ROOT'] . "/wallpapers/*");
-            foreach ($temp_files as $temp_file) {
+            $raw_data = file_get_contents(Constants::$cdnUrl. "/allFiles.json");
+            $json = json_decode($raw_data);
+            $file_array = $json->{"files"};
 
-                if (str_contains($temp_file, ".jpg")
-                || str_contains($temp_file, ".jpeg")
-                || str_contains($temp_file, ".png")
-                || str_contains($temp_file, ".JPG")
-                || str_contains($temp_file, ".PNG")
-                || str_contains($temp_file, ".JPEG")) {
-                    array_push($files, str_replace($_SERVER['DOCUMENT_ROOT'] . "/wallpapers/", "", $temp_file));
+            foreach ($file_array as $file) {
+
+                if (str_contains($file, ".jpg")
+                || str_contains($file, ".jpeg")
+                || str_contains($file, ".png")
+                || str_contains($file, ".JPG")
+                || str_contains($file, ".PNG")
+                || str_contains($file, ".JPEG")) {
+                    array_push($files, $file);
                 }
             }
 

@@ -46,8 +46,8 @@
         var html = "<div id='dvImageContainer' class='row'>";
         $.each(data, function(index, item) {
             html += '<div class="gallery px-3 py-3 col-12 col-md-6 col-lg-4">';
-            html += '<a target="_blank" href="https://cdn.minepaper.net/' + item + '">';
-            html += '<img src="https://cdn.minepaper.net/' + item + '" class="pixel-corners-radius-10-px px-0">';
+            html += '<a target="_blank" href="<?php echo Constants::$cdnUrl ?>/' + item + '">';
+            html += '<img src="<?php echo Constants::$cdnUrl ?>/' + item + '" class="pixel-corners-radius-10-px px-0">';
             html += '</a></div>';
         });
         html += "</div>";

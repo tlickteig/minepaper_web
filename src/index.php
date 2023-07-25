@@ -27,7 +27,7 @@ $randomImages = array_slice($files, 0, $numberOfCarouselItems);
         foreach ($randomImages as $image) :
         ?>
             <div class="d-table-row d-lg-table-cell px-2">
-                <img src="https://cdn.minepaper.net/<?= $image; ?>" alt="Example Minecraft landscape option" class="mb-3 mb-lg-0 container-fluid rounded pixel-corners-radius-10-px px-0" />
+                <img src="<?php echo Constants::$cdnUrl ?>/<?= $image; ?>" alt="Example Minecraft landscape option" class="mb-3 mb-lg-0 container-fluid rounded pixel-corners-radius-10-px px-0" />
             </div>
         <?php endforeach; ?>
     </div>

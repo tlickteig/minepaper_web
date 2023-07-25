@@ -8,6 +8,8 @@ class Constants {
     public static $fileUploadMaxImagesInUploadDirectory = 100;
     public static $fileUploadMaxSizeBytes = 5000000;
 
+    public static $cdnUrl = "https://cdn.minepaper.net";
+
     public static $projectName = "MinePaper";
     // The default active download tab if user agent can not be found. Match with a "quickName"
     public static $defaultTabName = "windows";
