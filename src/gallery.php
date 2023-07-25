@@ -39,13 +39,18 @@
         overflow: auto;
         margin: 0 auto !important;
     }
+
+    .paginationjs .paginationjs-pages li>a, .paginationjs .paginationjs-pages li.active>a {
+        min-width:2rem;
+        height:2rem;
+    }
 </style>
 
 <script>
     function mainWindowTemplate(data) {
         var html = "<div id='dvImageContainer' class='row'>";
         $.each(data, function(index, item) {
-            html += '<div class="gallery px-3 py-3 col-12 col-md-6 col-lg-4">';
+            html += '<div class="gallery px-2 py-3 col-12 col-md-6 col-lg-4">';
             html += '<a target="_blank" href="<?php echo Constants::$cdnUrl ?>/' + item + '">';
             html += '<img src="<?php echo Constants::$cdnUrl ?>/' + item + '" class="pixel-corners-radius-10-px px-0">';
             html += '</a></div>';
@@ -80,7 +85,7 @@
 
 <div class="container">
     <h2>Wallpaper Gallery</h2>
-    <div id ="dvPagination">
+    <div id ="dvPagination" class="py-4">
     </div>
     <br />
     <div id="dvImageGallery">
