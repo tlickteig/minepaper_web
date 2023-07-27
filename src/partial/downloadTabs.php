@@ -32,7 +32,7 @@ $activeOS = get_os_name("quickName") ?? Constants::$defaultTabName;
     }
 </style>
 
-<div class="col-lg-3 d-flex align-items-center" role="navigation">
+<div class="d-flex justify-content-center" role="navigation">
     <ul class="nav nav-pills" id="releaseTypeTab" role="tablist">
         <?php
         foreach ($tabInfo as $osType) :
@@ -44,7 +44,7 @@ $activeOS = get_os_name("quickName") ?? Constants::$defaultTabName;
         <?php endforeach; ?>
     </ul>
 </div>
-<div class="tab-content col-lg-9">
+<div class="tab-content">
     <?php
     foreach ($tabInfo as $osType) :
         $isActive = $osType["quickName"] == $activeOS;
