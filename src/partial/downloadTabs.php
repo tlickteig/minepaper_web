@@ -14,26 +14,37 @@ $activeOS = get_os_name("quickName") ?? Constants::$defaultTabName;
         border-bottom: none;
     }
 
-    .nav-tabs .nav-link.active {
-        background-color: var(--bs-gray-200);
+    .nav-pills .nav-link {
+        background-color: #196d17;
+        color: lightgrey;
+    }
+    .nav-pills .navlink:hover {
+        color: #fff;
+    }
+
+    .nav-pills .nav-link.active {
+        background-color: #252525;
+        color: #a0e080;
+    }
+
+    .nav-pills .nav-link:hover:not(.active) {
+        color: whitesmoke;
     }
 </style>
 
-<div role="navigation">
-    <ul class="nav nav-tabs" id="releaseTypeTab" role="tablist">
+<div class="col-lg-3 d-flex align-items-center" role="navigation">
+    <ul class="nav nav-pills" id="releaseTypeTab" role="tablist">
         <?php
         foreach ($tabInfo as $osType) :
             $isActiveClass = $osType["quickName"] == $activeOS ? "active" : "";
         ?>
-            <li class="nav-item" role="presentation">
-                <button type="button" role="tab" data-bs-toggle="tab" class='nav-link <?= $isActiveClass ?>' data-bs-target='#download-option-<?= $osType["quickName"] ?>' id='<?= $osType["quickName"] ?>-download-tab' aria-controls="download-option-<?= $osType['quickName'] ?>">
-                    <?= $osType["fancyName"] ?>
-                </button>
-            </li>
+            <a type="button" role="tab" data-bs-toggle="tab" class='nav-link flex-fill <?= $isActiveClass ?>' data-bs-target='#download-option-<?= $osType["quickName"] ?>' id='<?= $osType["quickName"] ?>-download-tab' aria-controls="download-option-<?= $osType['quickName'] ?>">
+                <?= $osType["fancyName"] ?>
+            </a>
         <?php endforeach; ?>
     </ul>
 </div>
-<div class="tab-content">
+<div class="tab-content col-lg-9">
     <?php
     foreach ($tabInfo as $osType) :
         $isActive = $osType["quickName"] == $activeOS;
