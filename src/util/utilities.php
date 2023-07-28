@@ -42,6 +42,10 @@
         return sizeof(scandir($directory));
     }
 
+    function is_apcu_enabled() {
+        return function_exists('apcu_enabled') && apcu_enabled();
+    }
+
     function get_user_agent() {
         return $_SERVER["HTTP_USER_AGENT"] ?? null;
     }
