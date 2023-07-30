@@ -1,4 +1,6 @@
 <?php
+    require_once("utilities.php");
+
     class BlogArticle {
         private $id;
         private $path;
@@ -28,11 +30,11 @@
             $this->author = $author;
             $this->title = $title;
             $this->dateAdded = $dateAdded;
-            $this->dateUpdated = $dateUPdated;
+            $this->dateUpdated = $dateUpdated;
         }
 
         public function get_id() {
-            return $id;
+            return $this->id;
         }
 
         public function set_id($id) {
@@ -41,7 +43,7 @@
         }
 
         public function get_path() {
-            return $path;
+            return $this->path;
         }
 
         public function set_path($path) {
@@ -50,7 +52,7 @@
         }
 
         public function get_html() {
-            return $html;
+            return $this->html;
         }
 
         public function set_html($html) {
@@ -59,7 +61,7 @@
         } 
 
         public function get_author() {
-            return $author;
+            return $this->author;
         }
 
         public function set_author($author) {
@@ -68,7 +70,7 @@
         }
 
         public function get_title() {
-            return $title;
+            return $this->title;
         }
 
         public function set_title($title) {
@@ -77,7 +79,7 @@
         }
 
         public function get_date_added() {
-            return $dateAdded;
+            return $this->dateAdded;
         }
 
         public function set_date_added($dateAdded) {
@@ -86,7 +88,7 @@
         }
 
         public function get_date_updated() {
-            return $dateAdded;
+            return $this->dateAdded;
         }
 
         public function set_date_updated($dateUpdated) {
@@ -119,7 +121,7 @@
 
     class BlogUtils {
         
-        public static $articleCacheKey = "BLOG_POSTS";
+        public static $articleCacheKey = "BLOG_POST";
         public static $articleCachettlSeconds = 3600;
         
         public static function fetch_article_by_id($id) {
@@ -132,10 +134,46 @@
 
         public static function save_article_to_cache($article) {
             
+            $is_apcu_enabled = is_apcu_enabled();
+            $articles = array();
+
+            if ($is_apcu_enabled) {
+                $cacheKey = BlogUtils::$articleCacheKey . "_" . $article->get_id() . "_" . $article->get_path();
+                apcu_store($cacheKey, (array)$article, $articleCachettlSeconds);
+            }
         }
 
         public static function load_article_from_cache_by_id($id) {
 
+            $is_apcu_enabled = is_apcu_enabled();
+            $output = null;
+
+            if ($is_apcu_enabled) {
+                foreach (apcu_cache_info()["cache_list"] as $key => $value) {
+                    $key = $value["info"];
+                    if (str_contains($key, BlogUtils::$articleCacheKey . "_" . $id)) {
+
+                        $cache_data = apcu_fetch($value["info"]);
+                        print_r($cache_data);
+                        /*foreach($cache_data as $x => $x_value) {
+                            echo "Key=" . $x . ", Value=" . $x_value;
+                            echo "<br>";
+                        }*/
+                        //echo $cache_data['BlogArticleid'];
+                        /*$id = intval($cache_data['BlogArticleid']);
+                        $path = $cache_data['BlogArticlepath'];
+                        $html = $cache_data['BlogArticlehtml'];
+                        $author = $cache_data['BlogArticleauthor'];
+                        $title = $cache_data['BlogArticletitle'];
+                        $dateAdded = new DateTime();
+                        $dateUpdated = new DateTime();
+
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $dateAdded, $dateUpdated);*/
+                    }
+                }
+            }
+
+            return $output;
         }
 
         public static function load_article_from_cache_by_path($path) {
