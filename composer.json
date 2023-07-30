@@ -1,5 +1,23 @@
 {
+  "license": "MIT",
+  "type": "project",
+  "homepage": "https://minepaper.net",
+  "config": {
+    "lock": false
+  },
   "require": {
-    
-  }
+    "php": ">=8.0",
+    "ext-apcu": "*",
+    "ext-openssl": "*"
+  },
+  "authors": [
+    {
+      "name": "Timothy Lickteig",
+      "role": "Developer"
+    },
+    {
+      "name": "Nova Hickie",
+      "role": "Developer"
+    }
+  ]
 }
