@@ -11,6 +11,6 @@
     $article = new BlogArticle(345, "/blog/testfdsdf", "<h1>Hello World!</h1>", "Timothy Lickteig", "This is a test title", $dateAdded, $dateUpdated);
     
     BlogUtils::save_article_to_cache($article);
-    $article2 = BlogUtils::load_article_from_cache_by_id(345);
-    //print_r($article2);
+    $article2 = BlogUtils::load_article_from_cache_by_path("/blog/testfdsdf");
+    print_r($article2);
 ?>

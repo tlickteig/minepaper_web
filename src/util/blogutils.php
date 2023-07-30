@@ -153,22 +153,20 @@
                     $key = $value["info"];
                     if (str_contains($key, BlogUtils::$articleCacheKey . "_" . $id)) {
 
-                        $cache_data = apcu_fetch($value["info"]);
-                        print_r($cache_data);
-                        /*foreach($cache_data as $x => $x_value) {
-                            echo "Key=" . $x . ", Value=" . $x_value;
-                            echo "<br>";
-                        }*/
-                        //echo $cache_data['BlogArticleid'];
-                        /*$id = intval($cache_data['BlogArticleid']);
-                        $path = $cache_data['BlogArticlepath'];
-                        $html = $cache_data['BlogArticlehtml'];
-                        $author = $cache_data['BlogArticleauthor'];
-                        $title = $cache_data['BlogArticletitle'];
+                        $json_data = json_encode(apcu_fetch($value["info"]));
+                        $json_data = str_replace("\u0000", "", $json_data);
+                        $json_data = str_replace("\"BlogArticle", "\"", $json_data);
+                        $cache_data = json_decode($json_data);
+                        
+                        $id = intval($cache_data->id);
+                        $path = $cache_data->path;
+                        $html = $cache_data->html;
+                        $author = $cache_data->author;
+                        $title = $cache_data-> title;
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $dateAdded, $dateUpdated);*/
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $dateAdded, $dateUpdated);
                     }
                 }
             }
@@ -178,6 +176,33 @@
 
         public static function load_article_from_cache_by_path($path) {
 
+            $is_apcu_enabled = is_apcu_enabled();
+            $output = null;
+
+            if ($is_apcu_enabled) {
+                foreach (apcu_cache_info()["cache_list"] as $key => $value) {
+                    $key = $value["info"];
+                    if (str_contains($key, "_" . $path)) {
+
+                        $json_data = json_encode(apcu_fetch($value["info"]));
+                        $json_data = str_replace("\u0000", "", $json_data);
+                        $json_data = str_replace("\"BlogArticle", "\"", $json_data);
+                        $cache_data = json_decode($json_data);
+                        
+                        $id = intval($cache_data->id);
+                        $path = $cache_data->path;
+                        $html = $cache_data->html;
+                        $author = $cache_data->author;
+                        $title = $cache_data-> title;
+                        $dateAdded = new DateTime();
+                        $dateUpdated = new DateTime();
+
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $dateAdded, $dateUpdated);
+                    }
+                }
+            }
+
+            return $output;
         }
     }
 ?>
