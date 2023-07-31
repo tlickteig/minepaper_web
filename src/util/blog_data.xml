@@ -11,6 +11,7 @@
             </p>
         </html>
         <description>This is a description</description>
+        <category></category>
         <title>This is a test article</title>
         <author>Timothy Lickteig</author>
         <path>/blog/this-is-a-test-article</path>
@@ -28,6 +29,7 @@
             </p>
         </html>
         <description>This is another description</description>
+        <category></category>
         <title>This is another test article</title>
         <author>Timothy Lickteiggggg</author>
         <path>/blog/this-is-another-test-article</path>

@@ -12,7 +12,7 @@
         private $dateAdded;
         private $dateUpdated;
 
-        public function __construct($id, $path, $html, $author, $title, $description, $dateAdded, $dateUpdated) {
+        public function __construct($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated) {
 
             $this->validate_non_zero_integer($id, "Id");
             $this->validate_string($path, "Path");
@@ -36,6 +36,7 @@
             $this->html = $html;
             $this->author = $author;
             $this->title = $title;
+            $this->category = $category;
             $this->description = $description;
             $this->dateAdded = $dateAdded;
             $this->dateUpdated = $dateUpdated;
@@ -93,6 +94,14 @@
         public function set_description($title) {
             $this->validate_string($description, "Description");
             $this->description = $description;
+        }
+
+        public function get_category() {
+            return $this->category;
+        }
+
+        public function set_category($category) {
+            $this->category = $category;
         }
 
         public function get_date_added() {
@@ -198,12 +207,13 @@
                         $author = (string)$article_list[$i]->author;
                         $title = (string)$article_list[$i]->title;
                         $description = (string)$article_list[$i]->description;
+                        $category = (string)$article_list[$i]->category;
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
                         $dateAdded->setTimestamp(strtotime((string)$article_list[$i]->dateAdded));
                         $dateUpdated->setTimestamp(strtotime((string)$article_list[$i]->dateUpdated));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $dateAdded, $dateUpdated);
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated);
 
                         if ($is_apcu_enabled) {
                             BlogUtils::save_article_to_cache($output);
@@ -234,6 +244,7 @@
                         $id = intval($article_list[$i]->id);
                         $path = (string)$article_list[$i]->path;
                         $description = (string)$article_list[$i]->description;
+                        $category = (string)$article_list[$i]->category;
                         $html = $article_list[$i]->html->asXML();
                         $author = (string)$article_list[$i]->author;
                         $title = (string)$article_list[$i]->title;
@@ -242,7 +253,7 @@
 
                         $dateAdded->setTimestamp(strtotime((string)$article_list[$i]->dateAdded));
                         $dateUpdated->setTimestamp(strtotime((string)$article_list[$i]->dateUpdated));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $dateAdded, $dateUpdated);
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated);
 
                         if ($is_apcu_enabled) {
                             BlogUtils::save_article_to_cache($output);
@@ -285,6 +296,7 @@
                         $path = $cache_data->path;
                         $html = $cache_data->html;
                         $description = $cache_data->description;
+                        $category = $cache_data->category;
                         $author = $cache_data->author;
                         $title = $cache_data-> title;
                         $dateAdded = new DateTime();
@@ -292,7 +304,7 @@
 
                         $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
                         $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $dateAdded, $dateUpdated);
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated);
                     }
                 }
             }
@@ -319,6 +331,7 @@
                         $path = $cache_data->path;
                         $html = $cache_data->html;
                         $description = $cache_data->description;
+                        $category = $cache_data->category;
                         $author = $cache_data->author;
                         $title = $cache_data->title;
                         $dateAdded = new DateTime();
@@ -326,7 +339,7 @@
 
                         $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
                         $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $dateAdded, $dateUpdated);
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated);
                     }
                 }
             }

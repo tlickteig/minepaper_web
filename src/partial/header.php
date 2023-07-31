@@ -6,7 +6,7 @@ $githubInfo = Constants::get_github_info();
 <header>
     <div id="dvHeader">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.php"><?= Constants::$projectName ?>.net</a>
+            <a class="navbar-brand" href="/index.php"><?= Constants::$projectName ?>.net</a>
             <a class="sr-only sr-only-focusable visually-hidden" href="#dvMainWindow">Skip to main content</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle site navigation">
                 <span class="navbar-toggler-icon"></span>
