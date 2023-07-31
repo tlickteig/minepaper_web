@@ -1,6 +1,6 @@
 <?php
     $documentRoot = $_SERVER["DOCUMENT_ROOT"];
-    require_once("$documentRoot/utilities.php");
+    require_once("$documentRoot/util/utilities.php");
 
     class BlogArticle {
         private $id;

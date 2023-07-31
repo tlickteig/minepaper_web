@@ -6,9 +6,9 @@
     //print_r($articles);
 ?>
 
-<?php require "../common/pageTop.php" ?>
+<?php require "$documentRoot/common/pageTop.php" ?>
 <div class="py-2" id="dvWelcome">
     <h2>Articles</h2>
 </div>
 
-<?php require "../common/pageBottom.php" ?>
+<?php require "$documentRoot/common/pageBottom.php" ?>
