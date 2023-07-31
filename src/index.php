@@ -1,4 +1,5 @@
 <?php
+$documentRoot = $_SERVER["DOCUMENT_ROOT"];
 define("PAGE_TITLE", "Welcome to MinePaper.net!");
 define("PAGE_DESC", "MinePaper is an application that automatically changes the desktop background between many stunning Minecraft screenshots.");
 
@@ -13,7 +14,7 @@ shuffle($files);
 $randomImages = array_slice($files, 0, $numberOfCarouselItems);
 ?>
 
-<?php require "common/pageTop.php" ?>
+<?php require "$documentRoot/common/pageTop.php" ?>
 <div class="py-2" id="dvWelcome">
     <h2>Welcome to <?= Constants::$projectName ?>.net!</h2>
 </div>
@@ -37,4 +38,4 @@ $randomImages = array_slice($files, 0, $numberOfCarouselItems);
     <h4>Install <?= Constants::$projectName ?></h4>
 </a>
 
-<?php require "common/pageBottom.php" ?>
+<?php require "$documentRoot/common/pageBottom.php" ?>

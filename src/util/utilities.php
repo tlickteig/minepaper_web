@@ -1,5 +1,7 @@
 <?php 
-    require_once('constants.php');
+    $documentRoot = $_SERVER["DOCUMENT_ROOT"];
+    require_once("$documentRoot/util/constants.php");
+
     function return_image_list_with_caching() {
 
         $is_acpu_available = function_exists('apcu_enabled') && apcu_enabled();

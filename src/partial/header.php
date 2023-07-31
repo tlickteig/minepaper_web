@@ -1,5 +1,6 @@
 <?php
-require_once('util/constants.php');
+$documentRoot = $_SERVER["DOCUMENT_ROOT"];
+require_once("$documentRoot/util/constants.php");
 $githubInfo = Constants::get_github_info();
 ?>
 <header>
@@ -21,6 +22,9 @@ $githubInfo = Constants::get_github_info();
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navbar-text" href="gallery.php">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-text" href="blog/index.php">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navbar-text" href="upload.php">Upload</a>

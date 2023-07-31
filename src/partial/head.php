@@ -7,7 +7,8 @@
         define("PAGE_DESC", "MinePaper.net");
     }
 
-    require_once("util/utilities.php");
+    $documentRoot = $_SERVER["DOCUMENT_ROOT"];
+    require_once("$documentRoot/util/utilities.php");
     $canonicalUrl = get_cannonical_url();
     $currentUrl = get_current_url();
 ?>

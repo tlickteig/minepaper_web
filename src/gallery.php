@@ -1,5 +1,6 @@
 <?php
-    require_once "util/utilities.php";
+    $documentRoot = $_SERVER["DOCUMENT_ROOT"];
+    require_once "$documentRoot/util/utilities.php";
 
     define("PAGE_TITLE", "Minepaper.net wallpaper gallery");
     define("PAGE_DESC", "View the beautiful Minecraft wallpapers that we have in store.");
@@ -92,4 +93,4 @@
     </div>
 </div>
 
-<?php require "common/pageBottom.php" ?>
+<?php require "$documentRoot/common/pageBottom.php" ?>

@@ -1,6 +1,7 @@
 <?php
-require_once("constants.php");
-require_once("utilities.php");
+$documentRoot = $_SERVER["DOCUMENT_ROOT"];
+require_once("$documentRoot/util/constants.php");
+require_once("$documentRoot/util/utilities.php");
 
 class RateLimiting {
     public static function increase_rate_limiting_category($rateLimitingCategory, $seconds, $rateByIpAddress = true) {

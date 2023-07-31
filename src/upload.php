@@ -1,7 +1,8 @@
 <?php
-require_once("util/utilities.php");
-require_once("util/constants.php");
-require_once("util/rateLimiting.php");
+$documentRoot = $_SERVER["DOCUMENT_ROOT"];
+require_once("$documentRoot/util/utilities.php");
+require_once("$documentRoot/util/constants.php");
+require_once("$documentRoot/util/rateLimiting.php");
 
 define("PAGE_TITLE", "Upload an image to Minepaper");
 define("PAGE_DESC", "Upload your own image to add to the ever-growing gallery of Minecraft landscapes");
@@ -59,7 +60,7 @@ if (isset($_POST["submit"])) {
 }
 ?>
 
-<?php require "common/pageTop.php" ?>
+<?php require "$documentRoot/common/pageTop.php" ?>
 <h2>Upload an image to <?= Constants::$projectName ?>.net</h2>
 <form action="upload.php" method="post" enctype="multipart/form-data" class="pt-5">
     <input type="file" name="uploadedFile" class="pb-5">
@@ -67,4 +68,4 @@ if (isset($_POST["submit"])) {
     <input type="submit" value="Upload Image" name="submit" class="py-1">
     <p class="py-2"><?= $output_message ?></p>
 </form>
-<?php require "common/pageBottom.php" ?>
+<?php require "$documentRoot/common/pageBottom.php" ?>
