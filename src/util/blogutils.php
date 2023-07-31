@@ -124,12 +124,116 @@
         public static $articleCacheKey = "BLOG_POST";
         public static $articleCachettlSeconds = 3600;
         
+        public static function fetch_article_list() {
+
+            $article_list = array();
+            $articles_output = array();
+            $is_apcu_enabled = is_apcu_enabled();
+
+            if ($is_apcu_enabled) {
+                if (apcu_exists(BlogUtils::$articleCacheKey . "_LIST")) {
+                    $article_list = apcu_fetch(BlogUtils::$articleCacheKey . "_LIST");
+                }
+            }
+
+            if (count($article_list) == 0) {
+                $xml = simplexml_load_file("../util/blog_data.xml");
+                $article_list_xml = $xml->article;
+
+                for ($i = 0; $i < count($article_list_xml); $i++) {
+                    $article_entry = array();
+                    $article_entry["id"] = intval($article_list_xml[$i]->id);
+                    $article_entry["path"] = (string)$article_list_xml[$i]->path;
+                    array_push($article_list, $article_entry);
+                }
+
+                if ($is_apcu_enabled) {
+                    apcu_store(BlogUtils::$articleCacheKey . "_LIST", $article_list, BlogUtils::$articleCachettlSeconds);
+                }
+            }
+
+            foreach ($article_list as $article_info) {
+                $article = BlogUtils::fetch_article_by_id($article_info["id"]);
+                array_push($articles_output, $article);
+            }
+
+            return $articles_output;
+        }
+
         public static function fetch_article_by_id($id) {
 
+            $is_apcu_enabled = is_apcu_enabled();
+            $output = null;
+            if ($is_apcu_enabled) {
+                $output = BlogUtils::load_article_from_cache_by_id($id);
+            }
+
+            if (!isset($output)) {
+                $xml = simplexml_load_file("../util/blog_data.xml");
+                $article_list = $xml->article;
+
+                for ($i = 0; $i < count($article_list); $i++) {
+                    if (intval($article_list[$i]->id) == intval($id)) {
+                        
+                        $id = intval($article_list[$i]->id);
+                        $path = (string)$article_list[$i]->path;
+                        $html = $article_list[$i]->html->asXML();
+                        $author = (string)$article_list[$i]->author;
+                        $title = (string)$article_list[$i]->title;
+                        $dateAdded = new DateTime();
+                        $dateUpdated = new DateTime();
+
+                        $dateAdded->setTimestamp(strtotime((string)$article_list[$i]->dateAdded));
+                        $dateUpdated->setTimestamp(strtotime((string)$article_list[$i]->dateUpdated));
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $dateAdded, $dateUpdated);
+
+                        if ($is_apcu_enabled) {
+                            BlogUtils::save_article_to_cache($output);
+                        }
+                        break;
+                    }
+                }
+            }
+
+            return $output;
         }
 
         public static function fetch_article_by_path($path) {
 
+            $is_apcu_enabled = is_apcu_enabled();
+            $output = null;
+            if ($is_apcu_enabled) {
+                $output = BlogUtils::load_article_from_cache_by_path($id);
+            }
+
+            if (!isset($output)) {
+                $xml = simplexml_load_file("../util/blog_data.xml");
+                $article_list = $xml->article;
+
+                for ($i = 0; $i < count($article_list); $i++) {
+                    if ($article_list[$i]->path == $path) {
+                        
+                        $id = intval($article_list[$i]->id);
+                        $path = (string)$article_list[$i]->path;
+                        $html = $article_list[$i]->html->asXML();
+                        $author = (string)$article_list[$i]->author;
+                        $title = (string)$article_list[$i]->title;
+                        $dateAdded = new DateTime();
+                        $dateUpdated = new DateTime();
+
+                        $dateAdded->setTimestamp(strtotime((string)$article_list[$i]->dateAdded));
+                        $dateUpdated->setTimestamp(strtotime((string)$article_list[$i]->dateUpdated));
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $dateAdded, $dateUpdated);
+
+                        if ($is_apcu_enabled) {
+                            BlogUtils::save_article_to_cache($output);
+                        }
+                        break;
+                    }
+                }
+            }
+
+            return $output;
         }
 
         public static function save_article_to_cache($article) {
@@ -139,7 +243,7 @@
 
             if ($is_apcu_enabled) {
                 $cacheKey = BlogUtils::$articleCacheKey . "_" . $article->get_id() . "_" . $article->get_path();
-                apcu_store($cacheKey, (array)$article, $articleCachettlSeconds);
+                apcu_store($cacheKey, (array)$article, BlogUtils::$articleCachettlSeconds);
             }
         }
 
@@ -166,6 +270,8 @@
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
+                        $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
+                        $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
                         $output = new BlogArticle($id, $path, $html, $author, $title, $dateAdded, $dateUpdated);
                     }
                 }
@@ -193,10 +299,12 @@
                         $path = $cache_data->path;
                         $html = $cache_data->html;
                         $author = $cache_data->author;
-                        $title = $cache_data-> title;
+                        $title = $cache_data->title;
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
+                        $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
+                        $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
                         $output = new BlogArticle($id, $path, $html, $author, $title, $dateAdded, $dateUpdated);
                     }
                 }
