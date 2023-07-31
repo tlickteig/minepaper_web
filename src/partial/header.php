@@ -18,25 +18,25 @@ $githubInfo = Constants::get_github_info();
                             <a class="nav-link navbar-text" href="index.php">Home</a>
                         </li> -->
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="downloads.php">Install</a>
+                        <a class="nav-link navbar-text" href="/downloads.php">Install</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="gallery.php">Gallery</a>
+                        <a class="nav-link navbar-text" href="/gallery.php">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="blog/index.php">Blog</a>
+                        <a class="nav-link navbar-text" href="/blog/index.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="upload.php">Upload</a>
+                        <a class="nav-link navbar-text" href="/upload.php">Upload</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="aboutUs.php">About</a>
+                        <a class="nav-link navbar-text" href="/aboutUs.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="tos.php">ToS</a>
+                        <a class="nav-link navbar-text" href="/tos.php">ToS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="privacyPolicy.php">Privacy Policy</a>
+                        <a class="nav-link navbar-text" href="/privacyPolicy.php">Privacy Policy</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle navbar-text" href="#" id="sourceOptions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle Github source navigation">Github</a>
