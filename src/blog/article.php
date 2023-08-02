@@ -8,7 +8,9 @@
     }
 
     $path = $_SERVER['REQUEST_URI'];
-    //$article = BlogUtils::fetch_article_by_path($path);
+    if ($article_id == 0 && ($path == "/blog/article/" || $path == "/blog/article.php")) {
+        header('Location: /blog/index.php');
+    }
 
     if ($article_id != 0) {
         $article = BlogUtils::fetch_article_by_id($article_id);
@@ -18,9 +20,9 @@
         $article = BlogUtils::fetch_article_by_path($path);
     }
 
-    /*if (!isset($article)) {
+    if (!isset($article)) {
         header('Location: /blog/index.php');
-    }*/
+    }
 ?>
 
 <?php require "$documentRoot/common/pageTop.php" ?>
