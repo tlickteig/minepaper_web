@@ -33,25 +33,26 @@
     <h2><?php echo $article->get_title(); ?></h2>
 </div>
 
-<p style="color: gray">
-    By
-    <?php echo $article->get_author(); ?>
-    On
-    <?php echo $article->get_date_added()->format("Y-m-d"); ?>
-</p>
+<div class="col-lg-10 mx-auto main-text">
+    <p style="color: gray">
+        By
+        <?php echo $article->get_author(); ?>
+        On
+        <?php echo $article->get_date_added()->format("Y-m-d"); ?>
+    </p>
 
-<?php echo $article->get_html(); ?>
+    <?php echo $article->get_html(); ?>
 
-<?php
-    $is_date_updated_set = $article->get_date_updated()->format("Y-m-d") != "1970-01-01";
-    $is_date_updated_different = $article->get_date_updated()->format("Y-m-d") != $article->get_date_added()->format("Y-m-d"); 
+    <?php
+        $is_date_updated_set = $article->get_date_updated()->format("Y-m-d") != "1970-01-01";
+        $is_date_updated_different = $article->get_date_updated()->format("Y-m-d") != $article->get_date_added()->format("Y-m-d"); 
 
-    if ($is_date_updated_set && $is_date_updated_different) {
-        $dateUpdated = $article->get_date_updated()->format("Y-m-d");
-        echo "<p style=\"color: gray; text-align: left;\">Last updated on $dateUpdated</p>";
-    }
-?>
+        if ($is_date_updated_set && $is_date_updated_different) {
+            $dateUpdated = $article->get_date_updated()->format("Y-m-d");
+            echo "<p style=\"color: gray; text-align: left;\">Last updated on $dateUpdated</p>";
+        }
+    ?>
 
-<a style="text-align: left; color: blue;" href="#" onclick="history.back()">Back to previous page</back>
-
-<?php require "$documentRoot/common/pageBottom.php" ?>
+    <a style="text-align: left; float: left; color: blue;" href="#" onclick="history.back()">Back to previous page</back>
+    <?php require "$documentRoot/common/pageBottom.php" ?>
+</div>

@@ -10,19 +10,21 @@
     <h2>All Articles</h2>
 </div>
 
-<?php foreach($articles as $article) : ?>
-    <h4 style="text-align: left">
-        <a href="<?php echo $article->get_path(); ?>">
-            <?php echo $article->get_title(); ?>
-        </a>
-        - By <?php echo $article->get_author(); ?>
-        <span style="color: gray">
-            on <?php echo $article->get_date_added()->format("Y-m-d"); ?>
-        </span>
-    </h4>
-    <p style="text-align: left; color: gray">
-        <?php echo $article->get_description(); ?>
-    </p>
-<?php endforeach; ?>
+<div class="col-lg-10 mx-auto main-text">
+    <?php foreach($articles as $article) : ?>
+        <h4 style="text-align: left">
+            <a href="<?php echo $article->get_path(); ?>">
+                <?php echo $article->get_title(); ?>
+            </a>
+            - By <?php echo $article->get_author(); ?>
+            <span style="color: gray">
+                on <?php echo $article->get_date_added()->format("Y-m-d"); ?>
+            </span>
+        </h4>
+        <p style="text-align: left; color: gray">
+            <?php echo $article->get_description(); ?>
+        </p>
+    <?php endforeach; ?>
+</div>
 
 <?php require "$documentRoot/common/pageBottom.php" ?>
