@@ -196,18 +196,20 @@
 
             if (!isset($output)) {
                 $xml = simplexml_load_file("../util/blog_data.xml");
-                $article_list = $xml->article;
+                $json = json_encode($xml);
+                $articles_obj = json_decode($json);
 
+                $article_list = $articles_obj->article;
                 for ($i = 0; $i < count($article_list); $i++) {
                     if (intval($article_list[$i]->id) == intval($id)) {
                         
                         $id = intval($article_list[$i]->id);
                         $path = (string)$article_list[$i]->path;
-                        $html = $article_list[$i]->html->asXML();
-                        $author = (string)$article_list[$i]->author;
-                        $title = (string)$article_list[$i]->title;
                         $description = (string)$article_list[$i]->description;
                         $category = (string)$article_list[$i]->category;
+                        $html = $xml->article[$i]->html->asXML();
+                        $author = (string)$article_list[$i]->author;
+                        $title = (string)$article_list[$i]->title;
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
@@ -231,21 +233,22 @@
             $is_apcu_enabled = is_apcu_enabled();
             $output = null;
             if ($is_apcu_enabled) {
-                $output = BlogUtils::load_article_from_cache_by_path($id);
+                $output = BlogUtils::load_article_from_cache_by_path($path);
             }
 
             if (!isset($output)) {
                 $xml = simplexml_load_file("../util/blog_data.xml");
-                $article_list = $xml->article;
+                $json = json_encode($xml);
+                $articles_obj = json_decode($json);
 
+                $article_list = $articles_obj->article;
                 for ($i = 0; $i < count($article_list); $i++) {
                     if ($article_list[$i]->path == $path) {
-                        
                         $id = intval($article_list[$i]->id);
                         $path = (string)$article_list[$i]->path;
                         $description = (string)$article_list[$i]->description;
                         $category = (string)$article_list[$i]->category;
-                        $html = $article_list[$i]->html->asXML();
+                        $html = $xml->article[$i]->html->asXML();
                         $author = (string)$article_list[$i]->author;
                         $title = (string)$article_list[$i]->title;
                         $dateAdded = new DateTime();
