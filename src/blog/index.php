@@ -12,7 +12,6 @@
 
 <div class="col-lg-10 mx-auto main-text">
     <?php foreach($articles as $article) : ?>
-        <?php //print_r($article); ?>
         <h4 style="text-align: center">
             <a href="<?php echo $article->get_path(); ?>">
                 <?php echo $article->get_title(); ?>
