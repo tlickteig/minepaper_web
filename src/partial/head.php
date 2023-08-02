@@ -1,15 +1,22 @@
 <?php 
-    if(!defined("PAGE_TITLE")) {
+    if (!defined("PAGE_TITLE")) {
         define("PAGE_TITLE", "MinePaper.net");
     }
 
-    if(!defined("PAGE_DESC")) {
+    if (!defined("PAGE_DESC")) {
         define("PAGE_DESC", "MinePaper.net");
     }
 
     $documentRoot = $_SERVER["DOCUMENT_ROOT"];
     require_once("$documentRoot/util/utilities.php");
-    $canonicalUrl = get_cannonical_url();
+
+    if (!defined("CANONICAL_URL")) {
+        $canonicalUrl = get_cannonical_url();
+    }
+    else {
+        $canonicalUrl = CANONICAL_URL;
+    }
+
     $currentUrl = get_current_url();
 ?>
 

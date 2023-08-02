@@ -23,13 +23,35 @@
     if (!isset($article)) {
         header('Location: /blog/index.php');
     }
+
+    define("CANONICAL_URL", $article->get_path());
+    define("PAGE_DESC", $article->get_description());
 ?>
 
 <?php require "$documentRoot/common/pageTop.php" ?>
 <div class="py-2" id="dvWelcome">
-    <h2>Article</h2>
+    <h2><?php echo $article->get_title(); ?></h2>
 </div>
 
-<?php echo print_r($article); ?>
+<p style="color: gray">
+    By
+    <?php echo $article->get_author(); ?>
+    On
+    <?php echo $article->get_date_added()->format("Y-m-d"); ?>    
+</p>
+
+<?php echo $article->get_html(); ?>
+
+<?php
+    $is_date_updated_set = $article->get_date_updated()->format("Y-m-d") != "1970-01-01";
+    $is_date_updated_different = $article->get_date_updated()->format("Y-m-d") != $article->get_date_added()->format("Y-m-d"); 
+
+    if ($is_date_updated_set && $is_date_updated_different) {
+        $dateUpdated = $article->get_date_updated()->format("Y-m-d");
+        echo "<p style=\"color: gray; text-align: left;\">Last updated on $dateUpdated</p>";
+    }
+?>
+
+<a style="text-align: left; color: blue;" href="#" onclick="history.back()">Back to previous page</back>
 
 <?php require "$documentRoot/common/pageBottom.php" ?>

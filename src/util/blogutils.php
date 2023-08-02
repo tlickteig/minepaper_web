@@ -114,7 +114,7 @@
         }
 
         public function get_date_updated() {
-            return $this->dateAdded;
+            return $this->dateUpdated;
         }
 
         public function set_date_updated($dateUpdated) {
@@ -213,6 +213,9 @@
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
+                        $html = str_replace("<html>", "", $html);
+                        $html = str_replace("</html>", "", $html);
+
                         $dateAdded->setTimestamp(strtotime((string)$article_list[$i]->dateAdded));
                         $dateUpdated->setTimestamp(strtotime((string)$article_list[$i]->dateUpdated));
                         $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated);
@@ -253,6 +256,9 @@
                         $title = (string)$article_list[$i]->title;
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
+
+                        $html = str_replace("<html>", "", $html);
+                        $html = str_replace("</html>", "", $html);
 
                         $dateAdded->setTimestamp(strtotime((string)$article_list[$i]->dateAdded));
                         $dateUpdated->setTimestamp(strtotime((string)$article_list[$i]->dateUpdated));
