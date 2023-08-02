@@ -12,7 +12,8 @@
 
 <div class="col-lg-10 mx-auto main-text">
     <?php foreach($articles as $article) : ?>
-        <h4 style="text-align: left">
+        <?php //print_r($article); ?>
+        <h4 style="text-align: center">
             <a href="<?php echo $article->get_path(); ?>">
                 <?php echo $article->get_title(); ?>
             </a>
@@ -21,9 +22,13 @@
                 on <?php echo $article->get_date_added()->format("Y-m-d"); ?>
             </span>
         </h4>
-        <p style="text-align: left; color: gray">
+        <p style="text-align: center; color: gray">
             <?php echo $article->get_description(); ?>
         </p>
+        <?php if ($article->get_thumbnail_src() != "") : ?>
+            <img class="col-md-6" src="<?php echo $article->get_thumbnail_src(); ?>" />
+        <?php endif; ?>
+        <p></p>
     <?php endforeach; ?>
 </div>
 

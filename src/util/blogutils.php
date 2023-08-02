@@ -8,11 +8,12 @@
         private $html;
         private $author;
         private $title;
+        private $thumbnailSrc;
         private $description;
         private $dateAdded;
         private $dateUpdated;
 
-        public function __construct($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated) {
+        public function __construct($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated, $thumbnailSrc) {
 
             $this->validate_non_zero_integer($id, "Id");
             $this->validate_string($path, "Path");
@@ -40,6 +41,7 @@
             $this->description = $description;
             $this->dateAdded = $dateAdded;
             $this->dateUpdated = $dateUpdated;
+            $this->thumbnailSrc = $thumbnailSrc;
         }
 
         public function get_id() {
@@ -120,6 +122,14 @@
         public function set_date_updated($dateUpdated) {
             $this->validate_string($dateUpdated, "DateUpdated");
             $this->dateUpdated = $dateUpdated;
+        }
+
+        public function get_thumbnail_src() {
+            return $this->thumbnailSrc;
+        }
+
+        public function set_thumbnail_src($thumbnailSrc) {
+            $this->thumbnailSrc = $thumbnailSrc;
         }
 
         private function validate_string($input, $property_name) {
@@ -210,6 +220,7 @@
                         $html = $xml->article[$i]->html->asXML();
                         $author = (string)$article_list[$i]->author;
                         $title = (string)$article_list[$i]->title;
+                        $thumbnailSrc = (string)$xml->article[$i]->thumbnailSrc;
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
@@ -218,7 +229,7 @@
 
                         $dateAdded->setTimestamp(strtotime((string)$article_list[$i]->dateAdded));
                         $dateUpdated->setTimestamp(strtotime((string)$article_list[$i]->dateUpdated));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated);
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated, $thumbnailSrc);
 
                         if ($is_apcu_enabled) {
                             BlogUtils::save_article_to_cache($output);
@@ -239,6 +250,8 @@
                 $output = BlogUtils::load_article_from_cache_by_path($path);
             }
 
+            echo "sdfasf";
+
             if (!isset($output)) {
                 $xml = simplexml_load_file("../util/blog_data.xml");
                 $json = json_encode($xml);
@@ -254,6 +267,7 @@
                         $html = $xml->article[$i]->html->asXML();
                         $author = (string)$article_list[$i]->author;
                         $title = (string)$article_list[$i]->title;
+                        $thumbnailSrc = (string)$xml->article[$i]->thumbnailSrc;
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
@@ -262,7 +276,7 @@
 
                         $dateAdded->setTimestamp(strtotime((string)$article_list[$i]->dateAdded));
                         $dateUpdated->setTimestamp(strtotime((string)$article_list[$i]->dateUpdated));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated);
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated, $thumbnailSrc);
 
                         if ($is_apcu_enabled) {
                             BlogUtils::save_article_to_cache($output);
@@ -307,13 +321,14 @@
                         $description = $cache_data->description;
                         $category = $cache_data->category;
                         $author = $cache_data->author;
-                        $title = $cache_data-> title;
+                        $title = $cache_data->title;
+                        $thumbnailSrc = $cache_data->thumbnailSrc;
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
                         $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
                         $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated);
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated, $thumbnailSrc);
                     }
                 }
             }
@@ -343,12 +358,13 @@
                         $category = $cache_data->category;
                         $author = $cache_data->author;
                         $title = $cache_data->title;
+                        $thumbnailSrc = $cache_data->thumbnailSrc;
                         $dateAdded = new DateTime();
                         $dateUpdated = new DateTime();
 
                         $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
                         $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated);
+                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated, $thumbnailSrc);
                     }
                 }
             }
