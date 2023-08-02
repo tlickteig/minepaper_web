@@ -37,7 +37,7 @@
     By
     <?php echo $article->get_author(); ?>
     On
-    <?php echo $article->get_date_added()->format("Y-m-d"); ?>    
+    <?php echo $article->get_date_added()->format("Y-m-d"); ?>
 </p>
 
 <?php echo $article->get_html(); ?>
