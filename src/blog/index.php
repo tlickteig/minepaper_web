@@ -12,7 +12,6 @@
 
 <div class="col-lg-10 mx-auto main-text">
     <?php foreach($articles as $article) : ?>
-        <?php //print_r($article); ?>
         <h4 style="text-align: center">
             <a href="<?php echo $article->get_path(); ?>">
                 <?php echo $article->get_title(); ?>
@@ -26,7 +25,9 @@
             <?php echo $article->get_description(); ?>
         </p>
         <?php if ($article->get_thumbnail_src() != "") : ?>
-            <img class="col-md-6" src="<?php echo $article->get_thumbnail_src(); ?>" />
+            <div class="container">
+                <img class="col-md-6" style="width: 50%; object-fit: contain;" src="<?php echo $article->get_thumbnail_src(); ?>" />
+            </div>
         <?php endif; ?>
         <p></p>
     <?php endforeach; ?>
