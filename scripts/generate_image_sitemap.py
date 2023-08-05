@@ -1,7 +1,10 @@
 import os
+import requests
+import json
 
 DOWNLOAD_DIRECTORY = "C:\\Repos\\minepaper_web\\src\\wallpapers"
 WALLPAPERS_PATH = "https://cdn.minepaper.net"
+WALLPAPER_LIST_PATH = "https://cdn.minepaper.net/allFiles.json"
 
 
 def main():
@@ -20,11 +23,10 @@ def main():
 
 def return_list_of_images_in_directory():
 
-    output = []
-    for item in os.listdir(DOWNLOAD_DIRECTORY):
-        output.append(item)
-
-    return output
+    r = requests.get(WALLPAPER_LIST_PATH)
+    return_text = r.text
+    results = json.loads(return_text)
+    return results["files"]
 
 
 main()
