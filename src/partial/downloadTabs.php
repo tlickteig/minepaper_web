@@ -1,5 +1,6 @@
 <?php
-require_once "util/utilities.php";
+$documentRoot = $_SERVER["DOCUMENT_ROOT"];
+require_once "$documentRoot/util/utilities.php";
 
 // Get our active tabs
 $tabInfo = Constants::get_tab_info();

@@ -1,18 +1,121 @@
 <blog>
     <article>
-        <dateAdded>2023-07-20</dateAdded>
-        <dateUpdated>2023-07-27</dateUpdated>
+        <dateAdded>2023-08-05</dateAdded>
         <html>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                Resource packs have been a staple of Minecraft for many years. One slightly less known method of changing Minecraft's look is using shader packs. 
+                These shader packs require you to mod your installation, but in return you can alter the visual appearance much more. Instead of changing block
+                texture, shader packs generally alter lighting, shadows, clouds, and water effects. So without further ado then, lets go over what shaders and
+                resource packs that we use here at Minepaper.
             </p>
+            <br />
+            <h3>1. Bliss</h3>
             <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                The Bliss shader pack is one that gives Minecraft a very pastel appearance. Colors are bright and vibrant, but my favorite part are the
+                hyperrealistic clouds.
             </p>
+            <img src="https://cdn.minepaper.net/2023-08-05_13.20.30.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <a href="https://minecraftshader.com/bliss-shaders/" style="color: blue">Download Bliss</a>
+            <br />
+            <br />
+            <h3>2. BSL</h3>
+            <p>
+                BSL shaders take on a very similar appearance to Bliss in my opinion. The biggest difference to me is the slight aura that appears around blocks
+                when the light level is high. Clouds also look much softer than in Bliss, and there is a diamond shaped sun and moon. Shadows and water effects 
+                look pretty much the same though.
+            </p>
+            <img src="https://cdn.minepaper.net/2023-08-05_13.22.48.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <a href="https://www.bslshaders.com/download/" style="color: blue">Download BSL</a>
+            <br />
+            <br />
+            <h3>3. ComplementaryReimagined</h3>
+            <p>
+                This is another shader pack that gives Minecraft a distinct pastel appearance. Unlike in Bliss or BSL however, colors are a tad bit darker. In
+                addition, clouds have a funky rounded appearance that makes this pack unique. Lastly, the pastel appearance also appplies to bodies of water
+                in this one.
+            </p>
+            <img src="https://cdn.minepaper.net/2023-08-05_13.25.52.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <a href="https://www.complementary.dev/reimagined/" style="color: blue">Download ComplementaryReimagined</a>
+            <br />
+            <br />
+            <h3>4. ProjectLUMA</h3>
+            <p>
+                ProjectLUMA breaks the pastel trend of the previous items in the list and aims for raw visual fidelity. The colors are highly saturated, 
+                shadows are sharp, water looks like it came from a clear mountain stream, and the clouds are ultra realistic. Highly recommended.
+            </p>
+            <img src="https://cdn.minepaper.net/2023-08-05_13.28.19.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <a href="https://minecraftshader.com/projectluma-shaders/" style="color: blue">Download ProjectLUMA</a>
+            <br />
+            <br />
+            <h3>5. Solas Shaders</h3>
+            <p>
+                This shader pack is the one that I personally find to be the most beautiful. This is mostly owing to the amazing display of stars you will
+                see above the clouds even in the daytime. In addition, there is a breathtaking view of the aurora borealis at night that will leave your
+                jaws wide open like a barn door. These two factors alone are enough to trick you into thinking you're in a fantasy land, but it doesn't
+                end there. The shadows and water effects are perfectly akin to real life, and there is a circular sun and moon to boot. Overall, this is a
+                shader pack that is just waiting to wow you, and you should give it a shot if you are looking to spruce up your experience.
+            </p>
+            <img src="https://cdn.minepaper.net/2023-08-05_13.33.11.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <p>&#xA;</p>
+            <img src="https://cdn.minepaper.net/2023-08-05_13.35.48.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <a href="https://minecraftshader.com/solas-shaders/" style="color: blue">Download Solas</a>
+            <br />
+            <br />
+            <h3>6. Patrix</h3>
+            <p>
+                Moving on to resource packs now, we have Patrix. I personally adore Patrix due to the rustic look that it brings to Minecraft. Cobblestone,
+                Wood, and Dirt make npc villages look like they come from 16th century Europe. I also enjoy the look of ice blocks in particular, with their
+                webbed appearance that makes it look there are air bubbles trapped amongst the frozen blocks.
+            </p>
+            <img src="https://cdn.minepaper.net/2023-08-05_13.53.08.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <a href="https://www.curseforge.com/minecraft/texture-packs/patrix-32x" style="color: blue">Download Patrix</a>
+            <br />
+            <br />
+            <h3>7. ModernArch</h3>
+            <p>
+                Last but certainly not least, we have ModernArch. This is a resource pack that I find make the look of NPC villages very pleasing in
+                particular. Wooden doors have a sleek and modern appearance. Wood and Cobblestone blocks also look very clean, and torches look like old
+                school gas lanterns. Overall, I highly recommend this pack if your goal is to spruce up the look of artificial structures in game.
+            </p>
+            <img src="https://cdn.minepaper.net/2023-08-05_13.54.25.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <a href="https://www.designio.graphics/community/downloads/modernarch-1-20-1-19-128x-download" style="color: blue">Download ModernArch</a>
+            <br />
+            <br />
         </html>
-        <title>This is a test article</title>
+        <description>These are the Shaders and Resource packs that we use when taking screenshots to use as wallpapers</description>
+        <category>General</category>
+        <title>What Shaders and Resource packs does Minepaper use?</title>
         <author>Timothy Lickteig</author>
-        <path>/blog/this-is-a-test-article</path>
-        <id>0356</id>
+        <path>/blog/article/what-shaders-and-resource-packs-does-minepaper-use</path>
+        <id>2</id>
+        <thumbnailSrc>https://cdn.minepaper.net/2023-08-05_13.35.48.png</thumbnailSrc>
+    </article>
+    <article>
+        <dateAdded>2023-08-05</dateAdded>
+        <html>
+            <p>
+                Minepaper is a desktop application that will run in the background on your computer. All of the wallpapers are stored in the cloud,
+                and will get downloaded onto your computer automatically. Then, you simply just flip the switch, and set the interval that you want the
+                wallpaper to change at. After that, you can simply forget about it! Minepaper will run silently in the background, and your wallpaper
+                will be consistently refreshed with no action from you necessary. This app is completely free and open source, and is available for
+                both Windows and MacOS. Enjoy!
+            </p>
+            <img class="col-md-6" style="width: 50%; object-fit: contain;" src="https://cdn.minepaper.net/blog/logo-1.png" />
+            <br />
+        </html>
+        <description>Learn in depth about what Minepaper is all about.</description>
+        <category>General</category>
+        <title>What is Minepaper?</title>
+        <author>Timothy Lickteig</author>
+        <path>/blog/article/what-is-minepaper</path>
+        <id>1</id>
+        <thumbnailSrc>https://cdn.minepaper.net/blog/logo-1.png</thumbnailSrc>
     </article>
 </blog>

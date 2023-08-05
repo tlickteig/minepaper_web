@@ -1,16 +1,36 @@
 <?php 
-    require_once("../util/blogutils.php");
-    //echo $_SERVER['REQUEST_URI'];
+    $documentRoot = $_SERVER["DOCUMENT_ROOT"];
+    require_once("$documentRoot/util/blogutils.php");
 
-    $dateAdded = new DateTIme();
-    $dateAdded->setDate("2022", "06", "06");
-
-    $dateUpdated = new DateTime();
-    $dateUpdated->setDate("2022", "08", "08");
-
-    $article = new BlogArticle(345, "/blog/testfdsdf", "<h1>Hello World!</h1>", "Timothy Lickteig", "This is a test title", $dateAdded, $dateUpdated);
-    
-    BlogUtils::save_article_to_cache($article);
-    $article2 = BlogUtils::load_article_from_cache_by_id(345);
-    //print_r($article2);
+    $articles = BlogUtils::fetch_article_list();
 ?>
+
+<?php require "$documentRoot/common/pageTop.php" ?>
+<div class="py-2" id="dvWelcome">
+    <h2>All Articles</h2>
+</div>
+
+<div class="col-lg-10 mx-auto main-text">
+    <?php foreach($articles as $article) : ?>
+        <h4 style="text-align: center">
+            <a href="<?php echo $article->get_path(); ?>">
+                <?php echo $article->get_title(); ?>
+            </a>
+            - By <?php echo $article->get_author(); ?>
+            <span style="color: gray">
+                on <?php echo $article->get_date_added()->format("Y-m-d"); ?>
+            </span>
+        </h4>
+        <p style="text-align: center; color: gray">
+            <?php echo $article->get_description(); ?>
+        </p>
+        <?php if ($article->get_thumbnail_src() != "") : ?>
+            <div class="container">
+                <img class="col-md-6" style="width: 50%; object-fit: contain;" src="<?php echo $article->get_thumbnail_src(); ?>" />
+            </div>
+        <?php endif; ?>
+        <p></p>
+    <?php endforeach; ?>
+</div>
+
+<?php require "$documentRoot/common/pageBottom.php" ?>
