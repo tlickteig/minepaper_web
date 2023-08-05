@@ -26,6 +26,7 @@
 
     define("CANONICAL_URL", $article->get_path());
     define("PAGE_DESC", $article->get_description());
+    define("PAGE_TITLE", $article->get_title());
 ?>
 
 <?php require "$documentRoot/common/pageTop.php" ?>

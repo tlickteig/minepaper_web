@@ -249,9 +249,7 @@
             if ($is_apcu_enabled) {
                 $output = BlogUtils::load_article_from_cache_by_path($path);
             }
-
-            echo "sdfasf";
-
+            
             if (!isset($output)) {
                 $xml = simplexml_load_file("../util/blog_data.xml");
                 $json = json_encode($xml);
