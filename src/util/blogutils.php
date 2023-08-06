@@ -300,74 +300,84 @@
 
         public static function load_article_from_cache_by_id($id) {
 
-            $is_apcu_enabled = is_apcu_enabled();
-            $output = null;
+            try {
+                $is_apcu_enabled = is_apcu_enabled();
+                $output = null;
 
-            if ($is_apcu_enabled) {
-                foreach (apcu_cache_info()["cache_list"] as $key => $value) {
-                    $key = $value["info"];
-                    if (str_contains($key, BlogUtils::$articleCacheKey . "_" . $id)) {
+                if ($is_apcu_enabled) {
+                    foreach (apcu_cache_info()["cache_list"] as $key => $value) {
+                        $key = $value["info"];
+                        if (str_contains($key, BlogUtils::$articleCacheKey . "_" . $id)) {
 
-                        $json_data = json_encode(apcu_fetch($value["info"]));
-                        $json_data = str_replace("\u0000", "", $json_data);
-                        $json_data = str_replace("\"BlogArticle", "\"", $json_data);
-                        $cache_data = json_decode($json_data);
-                        
-                        $id = intval($cache_data->id);
-                        $path = $cache_data->path;
-                        $html = $cache_data->html;
-                        $description = $cache_data->description;
-                        $category = $cache_data->category;
-                        $author = $cache_data->author;
-                        $title = $cache_data->title;
-                        $thumbnailSrc = $cache_data->thumbnailSrc;
-                        $dateAdded = new DateTime();
-                        $dateUpdated = new DateTime();
+                            $json_data = json_encode(apcu_fetch($value["info"]));
+                            $json_data = str_replace("\u0000", "", $json_data);
+                            $json_data = str_replace("\"BlogArticle", "\"", $json_data);
+                            $cache_data = json_decode($json_data);
+                            
+                            $id = intval($cache_data->id);
+                            $path = $cache_data->path;
+                            $html = $cache_data->html;
+                            $description = $cache_data->description;
+                            $category = $cache_data->category;
+                            $author = $cache_data->author;
+                            $title = $cache_data->title;
+                            $thumbnailSrc = $cache_data->thumbnailSrc;
+                            $dateAdded = new DateTime();
+                            $dateUpdated = new DateTime();
 
-                        $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
-                        $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated, $thumbnailSrc);
+                            $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
+                            $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
+                            $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated, $thumbnailSrc);
+                        }
                     }
                 }
-            }
 
-            return $output;
+                return $output;
+            }
+            catch (Exception $e) {
+                error_log($e);
+            }
         }
 
         public static function load_article_from_cache_by_path($path) {
 
-            $is_apcu_enabled = is_apcu_enabled();
-            $output = null;
+            try {
+                $is_apcu_enabled = is_apcu_enabled();
+                $output = null;
 
-            if ($is_apcu_enabled) {
-                foreach (apcu_cache_info()["cache_list"] as $key => $value) {
-                    $key = $value["info"];
-                    if (str_contains($key, "_" . $path)) {
+                if ($is_apcu_enabled) {
+                    foreach (apcu_cache_info()["cache_list"] as $key => $value) {
+                        $key = $value["info"];
+                        if (str_contains($key, "_" . $path)) {
 
-                        $json_data = json_encode(apcu_fetch($value["info"]));
-                        $json_data = str_replace("\u0000", "", $json_data);
-                        $json_data = str_replace("\"BlogArticle", "\"", $json_data);
-                        $cache_data = json_decode($json_data);
-                        
-                        $id = intval($cache_data->id);
-                        $path = $cache_data->path;
-                        $html = $cache_data->html;
-                        $description = $cache_data->description;
-                        $category = $cache_data->category;
-                        $author = $cache_data->author;
-                        $title = $cache_data->title;
-                        $thumbnailSrc = $cache_data->thumbnailSrc;
-                        $dateAdded = new DateTime();
-                        $dateUpdated = new DateTime();
+                            $json_data = json_encode(apcu_fetch($value["info"]));
+                            $json_data = str_replace("\u0000", "", $json_data);
+                            $json_data = str_replace("\"BlogArticle", "\"", $json_data);
+                            $cache_data = json_decode($json_data);
+                            
+                            $id = intval($cache_data->id);
+                            $path = $cache_data->path;
+                            $html = $cache_data->html;
+                            $description = $cache_data->description;
+                            $category = $cache_data->category;
+                            $author = $cache_data->author;
+                            $title = $cache_data->title;
+                            $thumbnailSrc = $cache_data->thumbnailSrc;
+                            $dateAdded = new DateTime();
+                            $dateUpdated = new DateTime();
 
-                        $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
-                        $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
-                        $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated, $thumbnailSrc);
+                            $dateAdded->setTimestamp(strtotime($cache_data->dateAdded->date));
+                            $dateUpdated->setTimestamp(strtotime($cache_data->dateUpdated->date));
+                            $output = new BlogArticle($id, $path, $html, $author, $title, $description, $category, $dateAdded, $dateUpdated, $thumbnailSrc);
+                        }
                     }
                 }
-            }
 
-            return $output;
+                return $output;
+            }
+            catch (Exception $e) {
+                error_log($e);
+            }
         }
     }
 ?>
