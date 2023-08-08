@@ -30,13 +30,7 @@ $githubInfo = Constants::get_github_info();
                         <a class="nav-link navbar-text" href="/upload.php">Upload</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text" href="/aboutUs.php">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navbar-text" href="/tos.php">ToS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navbar-text" href="/privacyPolicy.php">Privacy Policy</a>
+                        <a class="nav-link navbar-text" href="/about.php">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle navbar-text" href="#" id="sourceOptions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle Github source navigation">Github</a>
