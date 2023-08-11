@@ -16,7 +16,7 @@ define("PAGE_DESC", "Learn more about MinePaper, including the terms of service 
     <div class="py-4" id="tos">
         <h2>Terms of Service</h2>
         <div class="main-text">
-            <?= Constants::$projectName ?>.net is completely free to use for any non-malicious and non-plaigaristic purpose. Enjoy!
+            <?= Constants::$projectName ?>.net is completely free to use for any non-malicious and non-plaigaristic purpose.
         </div>
     </div>
     <div class="py-4" id="privacy">
