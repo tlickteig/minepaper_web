@@ -17,9 +17,6 @@
                 <?php echo $article->get_title(); ?>
             </a>
             - By <?php echo $article->get_author(); ?>
-            <span style="color: gray">
-                on <?php echo $article->get_date_added()->format("Y-m-d"); ?>
-            </span>
         </h4>
         <p style="text-align: center; color: gray">
             <?php echo $article->get_description(); ?>

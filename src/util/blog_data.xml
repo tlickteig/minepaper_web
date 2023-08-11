@@ -1,5 +1,82 @@
 <blog>
     <article>
+        <dateAdded>2023-08-11</dateAdded>
+        <html>
+            <p>
+                Back in the day, there was just Java edition. Now, there are so many that even I
+                can barely keep track of them. Luckily I have this helpful little guide written to help
+                you. First things first, I will only be listing the main game, and not any of the spin-offs
+                like legends or dungeons because neither of them are the typical sandbox game that
+                you might expect, and they frankly deserve their own articles.
+            </p>
+            <h3>Legacy console editions</h3>
+            <iframe style="width: 75%" width="560" height="315" src="https://www.youtube.com/embed/rvlwWiskcLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">#</iframe>
+            <br />
+            <br />
+            <p>
+                The first set of versions that I'm going to mention are the legacy console editions. This
+                harkens back to the early days of Minecraft, back in the early 2010's. This predominantly 
+                includes both the Xbox 360 and PS3 versions of the game, although there were also PS Vita 
+                and Wii U versions. They are unfortunately abandoned now, but are probably 
+                still good for a bit of fun if you happen to dust off your old Xbox.
+                Either way though, most people will not be playing on this version, so lets move on.
+            </p>
+            <h3>Java edition</h3>
+            <p>
+                Next version is Java edition. This version in my opinion is for two different groups of
+                people: Mac/Linux users and modders. Unfortunately, Java edition is the only option for Mac/Linux users,
+                due to Java itself being cross-platform by design. Luckily the percentage of Minecraft players
+                Mac is pretty small, and they seem to be doing just fine.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/java-launcher.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <br />
+            <p>
+                Java edition is also your only real option if you plan to mod the game. Other editions benefit
+                from texture packs and behavior packs, but good luck if you want to 
+                <a href="https://micdoodle8.com/mods/galacticraft/" style="color: blue">
+                    go to the freaking moon!
+                </a>
+                That being said, I am not sure I can recommend it for all PC users (especially low end hardware)
+                due to the severe optimization issues that it has accumulated over the years.
+            </p>
+            <h3>Bedrock Edition</h3>
+            <p>
+                The next one is what I would recommend that most people play on, which is Bedrock edition. This
+                edition is what is available for all major mobile platforms, Windows, Xbox one/series consoles, 
+                PS4/PS5 and the Nintendo Switch. Written in C++ rather than Java, Bedrock editions of Minecraft 
+                are much more optimized for the devices that they run on. The downside is that the game is much 
+                less customizable than Java edition, and console users are required to pay for premium online 
+                services, but it's not like they have a choice anyways. Nevertheless, it's the version that runs 
+                on the most platforms, simple to play, and is perfectly optimized. For that reason, I recommend 
+                it for the most people.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/windows-edition-homepage.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <br />
+            <h3>Other weird versions</h3>
+            <ul style="width: 45%; margin: 0 auto; text-align: left">
+                <li>Education edition</li>
+                <li>Minecraft Earth</li>
+                <li>Pi Edition</li>
+                <li>China Edition</li>
+                <li>Minecraft Classic</li>
+                <li>New Nintendo 3DS version</li>
+                <li>Gear VR edition</li>
+                <li>Fire TV Edition</li>
+                <li>Apple TV edition</li>
+                <li>Minecraft 4k</li>
+            </ul>
+        </html>
+        <description>Navigate the sea of different Minecraft version using this guide</description>
+        <category>General</category>
+        <title>Which edition of Minecraft is right for you?</title>
+        <author>Timothy Lickteig</author>
+        <path>/blog/article/which-edition-of-minecraft-is-right-for-you</path>
+        <id>3</id>
+        <thumbnailSrc>https://cdn.minepaper.net/blog/minecraft-pi-edition.webp</thumbnailSrc>
+    </article>
+    <article>
         <dateAdded>2023-08-05</dateAdded>
         <html>
             <p>

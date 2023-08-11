@@ -48,10 +48,10 @@
         $is_date_updated_set = $article->get_date_updated()->format("Y-m-d") != "1970-01-01";
         $is_date_updated_different = $article->get_date_updated()->format("Y-m-d") != $article->get_date_added()->format("Y-m-d"); 
 
-        if ($is_date_updated_set && $is_date_updated_different) {
+        /*if ($is_date_updated_set && $is_date_updated_different) {
             $dateUpdated = $article->get_date_updated()->format("Y-m-d");
             echo "<p style=\"color: gray; text-align: left;\">Last updated on $dateUpdated</p>";
-        }
+        }*/
     ?>
 
     <a style="text-align: left; float: left; color: blue;" href="#" onclick="history.back()">Back to previous page</back>
