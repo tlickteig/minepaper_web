@@ -24,9 +24,9 @@
             <h3>Java edition</h3>
             <p>
                 Next version is Java edition. This version in my opinion is for two different groups of
-                people: Mac/Linux users and modders. Unfortunately, Java edition is the only option for Mac/Linux users,
+                people: Mac users and modders. Unfortunately, Java edition is the only option for Mac users,
                 due to Java itself being cross-platform by design. Luckily the percentage of Minecraft players
-                Mac is pretty small, and they seem to be doing just fine.
+                on Mac is pretty small, and they seem to be doing just fine.
             </p>
             <img src="https://cdn.minepaper.net/blog/java-launcher.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
             <br />
