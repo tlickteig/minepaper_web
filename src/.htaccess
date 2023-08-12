@@ -2,3 +2,7 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^blog$ /blog/index.php [NC]
 RewriteRule ^blog/article/ /blog/article.php [NC]
+
+Redirect 301 /tos.php /about.php
+Redirect 301 /privacyPolicy.php /about.php
+Redirect 301 /aboutUs.php /about.php
