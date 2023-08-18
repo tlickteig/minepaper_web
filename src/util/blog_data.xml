@@ -3,6 +3,117 @@
         <dateAdded>2023-08-11</dateAdded>
         <html>
             <p>
+                The short answer is yes, and I've got a midrange laptop to prove it. The reason why however
+                is a bit nuanced, and I'll be getting to it later on in this article.
+            </p>
+            <p>
+                First, lets meet our test mule. This is a brand new HP Envy x360 that I bought a few weeks ago,
+                and will do perfect for a test like this, since it's a computer that one might casually want to
+                play a few games on, even if that is simply one of many roles that the laptop fulfills. Optimization
+                is really important here, since these users will not be shelling out lots of money to upgrade their
+                hardware, just to play a few games. Getting down to brass tax, this laptop is packing an AMD Ryzen
+                5 7530U with Radeon Graphics, 8gb of RAM, and a 256gb SSD. The specs aren't too poultry, however it
+                is by no means a gaming powerhouse either.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/tims-hp-envy.jpg" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <br />
+            <p>
+                Next is the world that we will be using for this test. Ideally, the worlds would be exactly the same
+                between the two editions, however I have noticed some differences that I just don't think we can
+                avoid. Upon spawning into each world using the same exact seed, the biomes and overall landscape looked
+                the same, but I very quickly noticed that generated structures were different. Villages and pillager outposts
+                seemed to be generating independently of the world seed, and I imagine that the same holds true for the
+                other generated structures in the world. There are probably other differences in the world generation
+                magic that I am missing, and I don't think that we will be able to do anything about them. Nevertheless,
+                I think it should have a negligible impact on performance.
+            </p>
+            <p>
+                Now for the actual test case. This part can be done in many different ways, like blowing up lots of TNT or  
+                building giant redstone contraptions. For me however, I think that the best way to do this is to just fly
+                around a whole bunch. I say this because I think this will be a long sustained load that will put many
+                components of the computer to the test like disk and memory, and I think that it will be a good simulation
+                of long, drawn out play sessions where you have a big task you're trying to complete, and small but frequent
+                stuttering will bug the crap out of you.
+            </p>
+            <p>
+                So lets get started then. I'm going to start at spawn (-63, 69, 0), and fly north for a few minutes until I
+                reach the coordinates of -6, 80, -2854. I will be watching the framerate, and also making a mental note of
+                how much stuttering I encounter. Render distance will be set to 32 chunks and graphical settings will be
+                cranked to the max.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/spawn-point-java-performance-test.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <br />
+            <p>
+                Doing this in Java edition was pretty striking. Starting off the journey, we were pretty solidly averaging
+                20 fps, but after a minute or two of flight we were down to ten. That's pretty unplayable, however I could get
+                the fps up to 60 by tweaking just a few video settings, meaning that it was still easy to get an enjoyable
+                experience.
+            </p>
+            <p>
+                Moving on to Bedrock edtion, things were much more cut and dry. With all settings cranked to the max, and with
+                render distance at 32 chunks, I got a solid 30 fps while flying around with some stutters here and there. If you
+                walked around instead, the framerate increased to 60! Additionally, turning the render distance down to 16 chunks
+                eliminated the performance woes, and the game ran as smooth as silk.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/java-edition-10-fps.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <br />
+            <p>
+                So in conclusion then, while Java edition is not horrible, you are definitely going to notice a squeeze on lower
+                end hardware. It's for that reason I would recommend that most users should generally gravitate towards Bedrock,
+                unless you have a specific reason not to, such as if you are gaming on a Mac, or if you intend to mod the game.
+            </p>
+            <p>
+                Lastly, I want to go over exactly why Java edition runs that much worse. Admittedly, what I am going to mention here
+                is kinda conjecture, as I can't make too many concrete claims without knowing all the ins and outs of how Minecraft
+                is written. That being said, lets go over what I think is causing Java edition to run slower.
+            </p>
+            <p>
+                In my opinion, the biggest reason why is that Java edition uses OpenGL, and the Bedrock edition for Windows uses DirectX.
+                These are both Graphics APIs, which is the set of commands that the game can use to talk to the computers graphics processor,
+                and thus render the game on your monitor. OpenGL has the major advantage of being cross platform but is also nowhere near as
+                performant. DirectX only runs on Windows and the Xbox, but is widely regarded as the best. This kind of stuff might not be
+                obvious at first, but can have a huge impact on the game you play, and can even make or break the experience in some cases.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/java-logo.png" class="col-md-6" style="width: 50%; object-fit: contain;"/>
+            <br />
+            <br />
+            <p>
+                The second reason that I think the game runs slower on Java edition is because of what the game is written in; Java. To go more
+                in detail about this we need to learn a bit about how programming languages work. In short, to get our code to run we need to
+                compile it; that is, translate the code into instructions that our processor can read. Bedrock edition is written in C++, which
+                compiles directly into raw machine code that the processor reads directly. The downside is that this is not cross platform,
+                since machine code only works on one type of processor, but it's about as fast as you can possibly get it. Java on the other
+                hand compiles into bytecode, which has to be translated on the fly by the Java runtime environment on your computer. This middle
+                man enables the code to be cross platform, but you will take a performance hit in the process.
+            </p>
+            <p>
+                Lastly, and likely least admittedly, is its age. I'll remind you that this is conjecture, but Java edition is pretty old. The
+                oldest edition period. It is almost a decade older than Bedrock edition, and is still being updated to this day. I can't say
+                for sure, but my guess is that there is at least some inefficient code weighing Java edition down, as that just happens with
+                software sometimes. It just builds up as the software ages and new features get piled on, and suddenly the developers have a
+                huge mess to clean up. Just take a gander at the Adobe suite.
+            </p>
+            <p>
+                In conclusion then, I hope you learned a thing or two about how Minecraft works under the hood, and why the performance of the
+                game might just not be quite good enough on that gaming PC that is starting to age. Anyways, my hands are cramping and it's
+                getting late, so peace out!
+            </p>
+        </html>
+        <description>Learn about the performance issues that have been silently plaging Java edition for multiple years now</description>
+        <category>General</category>
+        <title>Is Minecraft Java edition less optimized than Bedrock edition?</title>
+        <author>Timothy Lickteig</author>
+        <path>/blog/article/is-minecraft-java-edition-less-optimized-than-bedrock-edition</path>
+        <id>4</id>
+        <thumbnailSrc>https://cdn.minepaper.net/blog/java-edition-title.png</thumbnailSrc>
+    </article>
+    <article>
+        <dateAdded>2023-08-11</dateAdded>
+        <html>
+            <p>
                 Back in the day, there was just Java edition. Now, there are so many that even I
                 can barely keep track of them. Luckily I have this helpful little guide written to help
                 you. First things first, I will only be listing the main game, and not any of the spin-offs
