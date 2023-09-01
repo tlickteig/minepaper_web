@@ -23,14 +23,14 @@ def main():
             image_urls = return_images_in_s3_bucket()
             for image_url in image_urls:
                 output.append("\t\t<image:image>")
-                output.append(f"\t\t\t<loc>{image_url}</loc>")
+                output.append(f"\t\t\t<image:loc>{image_url}</image:loc>")
                 output.append("\t\t</image:image>")
 
         elif url != "/" and url != "/index.php":
             image_urls = return_image_links_on_page(url)
             for image_url in image_urls:
                 output.append("\t\t<image:image>")
-                output.append(f"\t\t\t<loc>{image_url}</loc>")
+                output.append(f"\t\t\t<image:loc>{image_url}</image:loc>")
                 output.append("\t\t</image:image>")
 
         output.append("\t</url>")
