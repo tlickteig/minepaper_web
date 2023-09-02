@@ -753,9 +753,84 @@
 		<image:image>
 			<image:loc>https://cdn.minepaper.net/2023-08-07_20.15.33.png</image:loc>
 		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_17.49.49.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_17.53.54.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_17.54.48.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_17.55.05.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_17.57.55.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_17.58.42.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.02.39.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.04.19.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.06.03.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.06.19.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.12.40.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.13.26.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.14.00.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.14.20.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.15.00.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.15.19.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.16.03.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.17.14.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.17.59.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.20.16.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.23.12.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.23.41.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.27.32.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/2023-08-31_18.34.49.png</image:loc>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://minepaper.net/blog/index.php</loc>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/wheat-seeds.webp</image:loc>
+		</image:image>
 		<image:image>
 			<image:loc>https://cdn.minepaper.net/blog/java-edition-title.png</image:loc>
 		</image:image>
@@ -774,6 +849,18 @@
 	</url>
 	<url>
 		<loc>https://minepaper.net/about.php</loc>
+	</url>
+	<url>
+		<loc>https://minepaper.net/blog/article/how-do-seeds-work-in-minecraft</loc>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/wheat-seeds.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/world-seed-in-chat.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/Linear_congruential_generator_visualisation.png</image:loc>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://minepaper.net/blog/article/is-minecraft-java-edition-less-optimized-than-bedrock-edition</loc>
