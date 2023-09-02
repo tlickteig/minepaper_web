@@ -1,5 +1,57 @@
 <blog>
     <article>
+        <dateAdded>2023-09-01</dateAdded>
+        <html>
+            <img src="https://cdn.minepaper.net/blog/wheat-seeds.webp" class="col-md-3" style="width: 25%; object-fit: contain;" />
+            <br />
+            <br />
+            <p>
+                No, not the kind of seeds you use to grow wheat. I'm talking about the kind that seem to magically
+                determine how your world gets generated. It seems like witchcraft how a seemingly randomly generated
+                world can be recreated with just a single number. As a software engineer however, it makes total
+                sense to me, and with a little knowledge nugget you can understand also.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/world-seed-in-chat.png" class="col-md-6" style="width: 75%; object-fit: contain;" />
+            <br />
+            <br />
+            <p>
+                To make a long rant short - it's because computers to not operate on a random basis. They just do
+                math, which is never random. To get around this, a computer will get a number from somewhere. This
+                number is usually derived from the current reading on the computer's clock, although it can be many
+                different things. Crucially though, this number must be constantly changing. This number is the seed,
+                which is then plugged into a bunch of highly complex mathematical equations. These equations are the
+                algorithm, and out pops out our random number. These algorithms are such that you can get as many 
+                random numbers as you want from a single seed. Here's where the magic happens though: if you plug
+                the same seed twice into the same algorithm, then you will get the exact same set of random numbers.
+                Knowing this, I think you can figure out where I'm going.
+            </p>
+            <figure>
+                <img src="https://cdn.minepaper.net/blog/Linear_congruential_generator_visualisation.png" class="col-md-6" style="width: 75%; object-fit: contain;" />
+                <figcaption>Source: 
+                    <a style="color: blue" href="https://en.wikipedia.org/wiki/Linear_congruential_generator">Wikipedia</a>
+                </figcaption>
+            </figure>
+            <br />
+            <p>
+                As you know, Minecraft worlds are randomly generated meaning that they rely on a random number algorithm,
+                similar to the one discussed above. This means that giving Minecraft the seed of a world we had previously,
+                we can replicate the same set of random numbers used to generate the world, and thus it will recreate the
+                world itself. The only real caveat is that anything you build or mine is not random, and is not tied to the
+                world seed, so make sure to back up your worlds folks. The same seed might also cause differences across
+                multiple different versions of the game due to changes in the way the world is generated. Anyways, I hope
+                this article helped give you some insight to how Minecraft works, and you can appreciate it the next time
+                you use one to quickly find an abandoned mineshaft.
+            </p>
+        </html>
+        <description>An insight to how the world seed can generate an entire world in Minecraft</description>
+        <category>General</category>
+        <title>How do seeds work in Minecraft?</title>
+        <author>Timothy Lickteig</author>
+        <path>/blog/article/how-do-seeds-work-in-minecraft</path>
+        <id>5</id>
+        <thumbnailSrc>https://cdn.minepaper.net/blog/wheat-seeds.webp</thumbnailSrc>
+    </article>
+    <article>
         <dateAdded>2023-08-17</dateAdded>
         <html>
             <p>
