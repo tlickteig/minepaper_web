@@ -27,6 +27,8 @@ class Constants {
         return array(
             Constants::$macArr,
             Constants::$windowsArr,
+            Constants::$androidArr,
+            Constants::$iosArr,
             Constants::$webArr
         );
     }
@@ -39,8 +41,8 @@ class Constants {
         "regex" => "(Windows|Wince|Win)", 
         "quickName" => "windows", 
         "fancyName" => "Windows", 
-        "releaseLink" => "ms-windows-store://pdp/?productid=9NRDK6D5FCKP", 
-        "githubLink" => "https://www.github.com/tlickteig/minepaper_uwp/releases/latest/"
+        "githubLink" => "https://www.github.com/tlickteig/minepaper_uwp/",
+        "releaseLink" => "ms-windows-store://pdp/?productid=9NRDK6D5FCKP"
     );
 
     public static $macArr = array(
@@ -48,15 +50,29 @@ class Constants {
         "regex" => "(Mac)", 
         "quickName" => "mac", 
         "fancyName" => "MacOS", 
-        "releaseLink" => "https://apps.apple.com/us/app/minepaper/id6450654431", 
-        "githubLink" => "https://www.github.com/tlickteig/minepaper_mac/releases/latest/"
+        "githubLink" => "https://www.github.com/tlickteig/minepaper_mac/",
+        "releaseLink" => "https://apps.apple.com/us/app/minepaper/id6450654431"
     );
 
     public static $webArr = array(
         "name" => "Web", 
         "quickName" => "web", 
         "fancyName" => "Website", 
-        "githubLink" => "https://www.github.com/tlickteig/minepaper_web/releases/latest/",
+        "githubLink" => "https://www.github.com/tlickteig/minepaper_web/",
+    );
+
+    public static $androidArr = array(
+        "name" => "Android",
+        "quickName" => "android",
+        "fancyName" => "Android",
+        "githubLink" => "https://www.github.com/tlickteig/minepaper_android/"
+    );
+
+    public static $iosArr = array (
+        "name" => "iOS",
+        "quickName" => "ios",
+        "fancyName" => "iOS",
+        "githubLink" => "https://www.github.com/tlickteig/minepaper_ios/"
     );
 }
 ?>
