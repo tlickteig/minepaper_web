@@ -40,8 +40,8 @@
                 Silicon Mac, or the x64 DMG Installer if your Mac has an Intel Processor. If on Linux, you will most
                 likely want the x64 Debian package, or the x64 RPM package depending on what distro you are running. Once
                 the right package is downloaded, then just run it and follow the super easy instructions in the setup wizard.
-                If you need more help, then I would recommend finding a guide online for this that is tailored to the
-                specific computer platform that you plan to run the server on.
+                If you need more help, then I would recommend finding a guide online for installing the JDK that is tailored 
+                to the specific computing platform that you plan to run the server on.
             </p>
             <h4 style="float: left">4. Willingness to maintain the server</h4>
             <br />
@@ -69,7 +69,34 @@
             <p>
                 Next, copy the .jar file that you just downloaded into its own directory, and double click on it. If
                 everything has gone correctly, then you should see that it has deposited some new files into the
-                directory. One of these files should be called 
+                directory. One of these files should be called eula.txt, which you will want to open in a text editing
+                program (I am using Notepad since I am doing this on Windows). Inside the doc, you should be able to see
+                a line like this: "eula=false", which you want to change to "eula=true" and save the document. Keep in 
+                mind that by doing this, you are accepting the agreement laid out on
+                <a href="https://www.minecraft.net/en-us/eula" style="color: blue">this page</a>.
+            </p>
+            <h4 style="float: left">3. Running for the first time</h4>
+            <br />
+            <br />
+            <p>
+                Once you have accepted the EULA, then you should be ready to run the server! Simply double click the server.jar
+                file once more, and you should see the server window pop up. Keep an eye on the console output that is now flowing
+                across the screen, as you need it to know what the server is currently doing. You should see some text along the
+                lines of "Preparing spawn area" with an increasing percentage value. Once it completes, then it should show a
+                completion message meaning that you are ready to connect to the server.
+            </p>
+            <h4 style="float: left">3. Connecting to the server</h4>
+            <br />
+            <br />
+            <p>
+                Now, it's time to fire up Minecraft. Once the game is launched, click "Multiplayer" and then "Direct Connection".
+                once there, you should see a field for an IP address. If you are running the game on the same computer as
+                the server, then just type "localhost". If the game and server are running on different computers, then
+                you will need to input the IP address of the machine running the server into the Direct Connection field
+                in the game. Finding the IP address of the server is different depending on what operating system you are
+                using, and it is easy to find how to do it online, so I am not going to go very much into detail here. That
+                being said, if you dig around in the network settings long enough, then you will probably find it. Once that
+                is completed, click "Join Server". If everything has gone correctly, then you should be playing on your server!
             </p>
         </html>
         <description>A step by step guide on everything you need to get your Minecraft server going</description>
