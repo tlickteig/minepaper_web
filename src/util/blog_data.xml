@@ -1,5 +1,86 @@
 <blog>
     <article>
+        <dateAdded>2023-10-08</dateAdded>
+        <html>
+            <p>
+                Getting a Minecraft server going might seem like a daunting process if you don't consider yourself
+                savvy with computers, however I hope that this article will challenge that assumption. With just a
+                little bit of head knowledge, you will be able to setup and maintain your very own server on the cheap.
+            </p>
+            <h2>Requirements</h2>
+            <h4 style="float: left">1. A computer to host the server</h4>
+            <br />
+            <br />
+            <p>
+                How powerful it needs to be is largely dependent on how many players you
+                expect to be on the server at any given time, although if you just plan to have a few of your friends on
+                it at once, then any computer made within the last ten years should do the trick. I would also consider
+                running the server on a dedicated computer, as you don't want to have to keep your main computer running
+                and connected to the network at all times, although it is not strictly necessary.
+            </p>
+            <h4 style="float: left">2. A good internet connection</h4>
+            <br />
+            <br />
+            <p>
+                If you only plan to have the server accessible over your local network, then this requirement is kinda
+                moot, however if you would like to let people to play from across the internet then you will need both
+                a fast internet connection, and an IP address that is unlikely to change very often (possibly a static one)
+                to ensure that players won't be constantly having to update their server settings.
+            </p>
+            <h4 style="float: left">3. Java Development Kit</h4>
+            <br />
+            <br />
+            <p>
+                Since this is a Java application we are running, Java will need to be installed. We won't just need the 
+                Java runtime environment however, we are going to need the Java Development Kit which can be found
+                <a href="https://www.oracle.com/java/technologies/downloads/" style="color: blue">here</a>.
+                Take care to install the correct package for the platform you are running on however, as unlike most
+                websites, it will not choose for you automatically. On Windows, this will likely be the x64 installer
+                or the x64 MSI installer. On Mac, this will be the ARM64 DMG installer if you are on an Apple
+                Silicon Mac, or the x64 DMG Installer if your Mac has an Intel Processor. If on Linux, you will most
+                likely want the x64 Debian package, or the x64 RPM package depending on what distro you are running. Once
+                the right package is downloaded, then just run it and follow the super easy instructions in the setup wizard.
+                If you need more help, then I would recommend finding a guide online for this that is tailored to the
+                specific computer platform that you plan to run the server on.
+            </p>
+            <h4 style="float: left">4. Willingness to maintain the server</h4>
+            <br />
+            <br />
+            <p>
+                In my opinion, the biggest hurdle to running your own server is not technical know-how or what computer
+                you can scrounge up, but your willingness to put the time and energy into maintaining the server down
+                the road. If the server is set up properly and stable, then maintenance should be fairly minimal, but it
+                will still require updates, backups, and fixes for when it does inevitably crash. Just keep it in mind when
+                embarking on a project like this
+            </p>
+            <h2>Getting started</h2>
+            <h4 style="float: left">1. Downloading the Software</h4>
+            <br />
+            <br />
+            <p>
+                Your first step is downloading the necessary files. Simply head to 
+                <a href="https://www.minecraft.net/en-us/download/server" style="color: blue">this page</a>
+                and download the .jar file. Since this is a Java application, the steps here on out should be the same
+                whether you are on Windows, Mac, or Linux.
+            </p>
+            <h4 style="float: left">2. Accepting the EULA</h4>
+            <br />
+            <br />
+            <p>
+                Next, copy the .jar file that you just downloaded into its own directory, and double click on it. If
+                everything has gone correctly, then you should see that it has deposited some new files into the
+                directory. One of these files should be called 
+            </p>
+        </html>
+        <description>A step by step guide on everything you need to get your Minecraft server going</description>
+        <category>General</category>
+        <title>How to set up a Minecraft server (Java edition)</title>
+        <author>Timothy Lickteig</author>
+        <path>/blog/article/set-up-a-java-edition-server</path>
+        <id>6</id>
+        <thumbnailSrc>https://cdn.minepaper.net/blog/logo-1.png</thumbnailSrc>
+    </article>
+    <article>
         <dateAdded>2023-09-01</dateAdded>
         <html>
             <img src="https://cdn.minepaper.net/blog/wheat-seeds.webp" class="col-md-3" style="width: 25%; object-fit: contain;" />
