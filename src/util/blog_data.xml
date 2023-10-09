@@ -4,8 +4,9 @@
         <html>
             <p>
                 Getting a Minecraft server going might seem like a daunting process if you don't consider yourself
-                savvy with computers, however I hope that this article will challenge that assumption. With just a
-                little bit of head knowledge, you will be able to setup and maintain your very own server on the cheap.
+                knowledgeable about servers and networking, however I hope that this article will challenge that
+                assumption. With just a little bit of head knowledge, you will be able to setup and maintain your 
+                very own server on the cheap.
             </p>
             <h2>Requirements</h2>
             <h4 style="float: left">1. A computer to host the server</h4>
@@ -43,7 +44,7 @@
                 If you need more help, then I would recommend finding a guide online for installing the JDK that is tailored 
                 to the specific computing platform that you plan to run the server on.
             </p>
-            <img src="https://cdn.minepaper.net/blog/jdk_download_windows.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/jdk_download_windows.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="Java Development Kit download page"/>
             <br />
             <br />
             <h4 style="float: left">4. Willingness to maintain the server</h4>
@@ -66,7 +67,7 @@
                 and download the .jar file. Since this is a Java application, the steps here on out should be the same
                 whether you are on Windows, Mac, or Linux.
             </p>
-            <img src="https://cdn.minepaper.net/blog/minecraft_server_download_page.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/minecraft_server_download_page.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="Minecraft server software download page"/>
             <br />
             <br />
             <h4 style="float: left">2. Accepting the EULA</h4>
@@ -81,10 +82,10 @@
                 mind that by doing this, you are accepting the agreement laid out on
                 <a href="https://www.minecraft.net/en-us/eula" style="color: blue">this page</a>.
             </p>
-            <img src="https://cdn.minepaper.net/blog/eula_txt_that_server_has_created.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/eula_txt_that_server_has_created.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="The eula.txt file that the server has created"/>
             <br />
             <br />
-            <img src="https://cdn.minepaper.net/blog/setting_eula_to_true_for_server.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/setting_eula_to_true_for_server.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="Agreeing to the EULA in the eula.txt file"/>
             <br />
             <br />
             <h4 style="float: left">3. Running for the first time</h4>
@@ -97,7 +98,7 @@
                 lines of "Preparing spawn area" with an increasing percentage value. Once it completes, then it should show a
                 completion message meaning that you are ready to connect to the server.
             </p>
-            <img src="https://cdn.minepaper.net/blog/minecraft_server_window_gui.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/minecraft_server_window_gui.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="The currently active Minecraft server window"/>
             <br />
             <br />
             <h4 style="float: left">3. Connecting to the server</h4>
@@ -113,7 +114,7 @@
                 being said, if you dig around in the network settings long enough, then you will probably find it. Once that
                 is completed, click "Join Server". If everything has gone correctly, then you should be playing on your server!
             </p>
-            <img src="https://cdn.minepaper.net/blog/minecraft_direct_connection_screen.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/minecraft_direct_connection_screen.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="Connection to our server from within the game"/>
             <br />
             <br />
             <h2>Optional Configuration</h2>
@@ -128,7 +129,7 @@
                 is a list of different settings, one for each line. If you are a beginner, please make sure to only modify
                 one value at a time, and only modify the values to the right of the = sign on each line.
             </p>
-            <img src="https://cdn.minepaper.net/blog/server_properties_file.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/server_properties_file.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="The server properties file"/>
             <br />
             <br />
             <h4 style="float: left">2. The world folder</h4>
@@ -140,7 +141,7 @@
                 any other Minecraft Java Edition world. This means that you can copy it elsewhere to backup the world, replace
                 it with one you downloaded from the internet, or transplant a world from singleplayer or another server.
             </p>
-            <img src="https://cdn.minepaper.net/blog/server_world_folder.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/server_world_folder.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="The world folder inside of the server"/>
             <br />
             <br />
             <h4 style="float: left">3. Player management</h4>
@@ -163,7 +164,7 @@
                 (all in easy to read JSON format) for troubleshooting, or if you need to change something
                 manually.
             </p>
-            <img src="https://cdn.minepaper.net/blog/server_player_json_folders.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/server_player_json_folders.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="The files containing player data"/>
             <br />
             <br />
             <h4 style="float: left">4. Port Forwarding</h4>
@@ -180,7 +181,7 @@
                 Just note however that the destination IP address field will be whatever the IP address of the computer 
                 hosting the server is. 
             </p>
-            <img src="https://cdn.minepaper.net/blog/port_forwarding_screenshot.png" class="col-md-3" style="width: 50%; object-fit: contain;" />
+            <img src="https://cdn.minepaper.net/blog/port_forwarding_screenshot.png" class="col-md-3" style="width: 50%; object-fit: contain;" alt="Port forwarding rule in the router settings" />
             <br />
             <br />
             <p>
@@ -192,6 +193,16 @@
                 server listens on by default), we can not only tell traffic to go to a specific device on the network,
                 but also that the traffic needs to be handled via the Minecraft server running on it.
             </p>
+            <h2>Conclusion</h2>
+            <p>
+                As you can see, running your own Minecraft server can require a little bit of technical know-how, however
+                I don't consider it something that most tech savvy people couldn't accomplish. In addition you can avoid
+                paying fees from a hosting provider, and you have the ability to dial the configuration into your exact
+                liking. That all being said however, there are many advanced things that you can do, like configuring
+                automatic backups, making the server start automatically upon boot up, and adding plugins to give your
+                server custom functionality. I'll have to get to all of that in a different article though, as this one
+                is long enough already. This was just to show you the basics of getting a server up and running.
+            </p>
         </html>
         <description>A step by step guide on everything you need to get your Minecraft server going</description>
         <category>General</category>
@@ -199,7 +210,7 @@
         <author>Timothy Lickteig</author>
         <path>/blog/article/set-up-a-java-edition-server</path>
         <id>6</id>
-        <thumbnailSrc>https://cdn.minepaper.net/blog/logo-1.png</thumbnailSrc>
+        <thumbnailSrc>https://cdn.minepaper.net/blog/minecraft_direct_connection_screen.png</thumbnailSrc>
     </article>
     <article>
         <dateAdded>2023-09-01</dateAdded>
