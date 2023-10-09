@@ -43,6 +43,9 @@
                 If you need more help, then I would recommend finding a guide online for installing the JDK that is tailored 
                 to the specific computing platform that you plan to run the server on.
             </p>
+            <img src="https://cdn.minepaper.net/blog/jdk_download_windows.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <br />
+            <br />
             <h4 style="float: left">4. Willingness to maintain the server</h4>
             <br />
             <br />
@@ -63,6 +66,9 @@
                 and download the .jar file. Since this is a Java application, the steps here on out should be the same
                 whether you are on Windows, Mac, or Linux.
             </p>
+            <img src="https://cdn.minepaper.net/blog/minecraft_server_download_page.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <br />
+            <br />
             <h4 style="float: left">2. Accepting the EULA</h4>
             <br />
             <br />
