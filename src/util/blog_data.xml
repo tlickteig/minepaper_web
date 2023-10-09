@@ -153,6 +153,9 @@
                 Just note however that the destination IP address field will be whatever the IP address of the computer 
                 hosting the server is. 
             </p>
+            <img src="https://cdn.minepaper.net/blog/port_forwarding_screenshot.png" class="col-md-3" style="width: 50%; object-fit: contain;" />
+            <br />
+            <br />
             <p>
                 In a nutshell, what we have done here is given our router a specific instruction. We have told it that
                 whenever it receives an inbound connection on port 25565, then to forward it to the destination IP address
