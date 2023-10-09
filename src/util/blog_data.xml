@@ -81,6 +81,12 @@
                 mind that by doing this, you are accepting the agreement laid out on
                 <a href="https://www.minecraft.net/en-us/eula" style="color: blue">this page</a>.
             </p>
+            <img src="https://cdn.minepaper.net/blog/eula_txt_that_server_has_created.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <br />
+            <br />
+            <img src="https://cdn.minepaper.net/blog/setting_eula_to_true_for_server.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <br />
+            <br />
             <h4 style="float: left">3. Running for the first time</h4>
             <br />
             <br />
@@ -91,6 +97,9 @@
                 lines of "Preparing spawn area" with an increasing percentage value. Once it completes, then it should show a
                 completion message meaning that you are ready to connect to the server.
             </p>
+            <img src="https://cdn.minepaper.net/blog/minecraft_server_window_gui.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <br />
+            <br />
             <h4 style="float: left">3. Connecting to the server</h4>
             <br />
             <br />
@@ -104,6 +113,9 @@
                 being said, if you dig around in the network settings long enough, then you will probably find it. Once that
                 is completed, click "Join Server". If everything has gone correctly, then you should be playing on your server!
             </p>
+            <img src="https://cdn.minepaper.net/blog/minecraft_direct_connection_screen.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <br />
+            <br />
             <h2>Optional Configuration</h2>
             <h4 style="float: left">1. The server.properties file</h4>
             <br />
@@ -116,6 +128,9 @@
                 is a list of different settings, one for each line. If you are a beginner, please make sure to only modify
                 one value at a time, and only modify the values to the right of the = sign on each line.
             </p>
+            <img src="https://cdn.minepaper.net/blog/server_properties_file.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <br />
+            <br />
             <h4 style="float: left">2. The world folder</h4>
             <br />
             <br />
@@ -125,6 +140,9 @@
                 any other Minecraft Java Edition world. This means that you can copy it elsewhere to backup the world, replace
                 it with one you downloaded from the internet, or transplant a world from singleplayer or another server.
             </p>
+            <img src="https://cdn.minepaper.net/blog/server_world_folder.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <br />
+            <br />
             <h4 style="float: left">3. Player management</h4>
             <br />
             <br />
@@ -145,6 +163,9 @@
                 (all in easy to read JSON format) for troubleshooting, or if you need to change something
                 manually.
             </p>
+            <img src="https://cdn.minepaper.net/blog/server_player_json_folders.png" class="col-md-3" style="width: 66%; object-fit: contain;" />
+            <br />
+            <br />
             <h4 style="float: left">4. Port Forwarding</h4>
             <br />
             <br />
