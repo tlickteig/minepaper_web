@@ -98,6 +98,70 @@
                 being said, if you dig around in the network settings long enough, then you will probably find it. Once that
                 is completed, click "Join Server". If everything has gone correctly, then you should be playing on your server!
             </p>
+            <h2>Optional Configuration</h2>
+            <h4 style="float: left">1. The server.properties file</h4>
+            <br />
+            <br />
+            <p>
+                When it comes to tweaking the server parameters to your liking, the server.properties file is where you
+                will find most of the settings for different aspects of the server. This includes the default game mode,
+                whether you want cheats enabled, the default difficulty, and many other things. This file is automatically
+                generated inside the same directory as the main server.jar file, and looking inside you can see that there
+                is a list of different settings, one for each line. If you are a beginner, please make sure to only modify
+                one value at a time, and only modify the values to the right of the = sign on each line.
+            </p>
+            <h4 style="float: left">2. The world folder</h4>
+            <br />
+            <br />
+            <p>
+                Inside the same directory as the server.jar file, you will find a folder called "world". This is the
+                folder where the world data is stored. Looking inside, you will find that it is 100% the exact same as
+                any other Minecraft Java Edition world. This means that you can copy it elsewhere to backup the world, replace
+                it with one you downloaded from the internet, or transplant a world from singleplayer or another server.
+            </p>
+            <h4 style="float: left">3. Player management</h4>
+            <br />
+            <br />
+            <p>
+                Inside the main server directory, you will find the following .json files:
+            </p>
+            <ul style="width: 45%; margin: 0 auto; text-align: left">
+                <li>banned-ips.json</li>
+                <li>banned-players.json</li>
+                <li>ops.json</li>
+                <li>whitelist.json</li>
+            </ul>
+            <br />
+            <p>
+                These are the files that store data about which players have cheats enabled, which players are banned,
+                and which players are whitelisted. You generally will not have to mess with these files since all
+                of that stuff is manageable via console commands, however this is where that data is stored 
+                (all in easy to read JSON format) for troubleshooting, or if you need to change something
+                manually.
+            </p>
+            <h4 style="float: left">4. Port Forwarding</h4>
+            <br />
+            <br />
+            <p>
+                With the server set up using methods mentioned above, you might come to find that the server is only
+                accessible to those on the same LAN network as you. You very well might want to host this server for your
+                friends/family from their own houses, to which I would direct you to open up a port forwarding rule inside
+                of your router. I'm going to prefice this by saying that doing this opens up a security risk, as it allows
+                anybody to access the server so long as they know your public IP address. In addition, I can't really give you a
+                step by step guide for it in this article since every router is going to have a different user interface. The
+                underlying concept is exactly the same however, and you should create a rule that looks like the image below. 
+                Just note however that the destination IP address field will be whatever the IP address of the computer 
+                hosting the server is. 
+            </p>
+            <p>
+                In a nutshell, what we have done here is given our router a specific instruction. We have told it that
+                whenever it receives an inbound connection on port 25565, then to forward it to the destination IP address
+                on the exact same port 25565. Just in case you are not aware, a port is used by server applications on your
+                computer to listen for incoming traffic, similar to how IP addresses can locate things across a network. So
+                by specifying the destination IP address and port 25565 (which just so happens to be what the Minecraft 
+                server listens on by default), we can not only tell traffic to go to a specific device on the network,
+                but also that the traffic needs to be handled via the Minecraft server running on it.
+            </p>
         </html>
         <description>A step by step guide on everything you need to get your Minecraft server going</description>
         <category>General</category>
@@ -212,7 +276,7 @@
                 experience.
             </p>
             <p>
-                Moving on to Bedrock edtion, things were much more cut and dry. With all settings cranked to the max, and with
+                Moving on to Bedrock edition, things were much more cut and dry. With all settings cranked to the max, and with
                 render distance at 32 chunks, I got a solid 30 fps while flying around with some stutters here and there. If you
                 walked around instead, the framerate increased to 60! Additionally, turning the render distance down to 16 chunks
                 eliminated the performance woes, and the game ran as smooth as silk.
