@@ -319,3 +319,26 @@ p {
 .main-text {
   padding-top: 1rem;
 }
+
+.nav-link {
+  --bs-nav-link-color: var(--bs-black);
+  border: var(--bs-nav-tabs-border-width) solid !important;
+  border-bottom: none;
+}
+
+.nav-pills .nav-link, .paginationjs .paginationjs-pages li>a {
+  background-color: #196d17 !important;
+  color: lightgrey !important;
+}
+.nav-pills .navlink:hover, .paginationjs .paginationjs-pages li>a:hover {
+  color: #fff !important;
+}
+
+.nav-pills .nav-link.active, .paginationjs .paginationjs-pages li>a.active {
+  background-color: #252525 !important;
+  color: #a0e080 !important;
+}
+
+.nav-pills .nav-link:hover:not(.active), .paginationjs .paginationjs-pages li>a:hover:not(.active) {
+  color: whitesmoke  !important;
+}

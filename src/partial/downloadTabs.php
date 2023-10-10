@@ -8,31 +8,6 @@ $tabInfo = Constants::get_tab_info();
 // Check for a quickName matching the OS returned from the User Agent. Use default if not found
 $activeOS = get_os_name("quickName") ?? Constants::$defaultTabName;
 ?>
-<style>
-    .nav-link {
-        --bs-nav-link-color: var(--bs-black);
-        border: var(--bs-nav-tabs-border-width) solid !important;
-        border-bottom: none;
-    }
-
-    .nav-pills .nav-link {
-        background-color: #196d17;
-        color: lightgrey;
-    }
-    .nav-pills .navlink:hover {
-        color: #fff;
-    }
-
-    .nav-pills .nav-link.active {
-        background-color: #252525;
-        color: #a0e080;
-    }
-
-    .nav-pills .nav-link:hover:not(.active) {
-        color: whitesmoke;
-    }
-</style>
-
 <div class="d-flex justify-content-center" role="navigation">
     <ul class="nav nav-pills" id="releaseTypeTab" role="tablist">
         <?php

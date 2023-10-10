@@ -15,10 +15,6 @@
         height: auto;
     }
 
-    .active a {
-        background-color: black !important;
-    }
-
     .paginationjs-nav {
         font-family: Minecraft !important;
     }
@@ -41,9 +37,15 @@
         margin: 0 auto !important;
     }
 
-    .paginationjs .paginationjs-pages li>a, .paginationjs .paginationjs-pages li.active>a {
-        min-width:2rem;
-        height:2rem;
+    .paginationjs .paginationjs-pages li>a {
+        width:2rem;
+        height:2rem !important;
+        font-size: 1rem;
+    }
+
+    .paginationjs .paginationjs-pages li.disabled>a {
+        color: black !important;
+        opacity: 1;
     }
 </style>
 
