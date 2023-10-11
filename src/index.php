@@ -15,7 +15,7 @@ $randomImages = array_slice($files, 0, $numberOfCarouselItems);
 ?>
 
 <?php require "$documentRoot/common/pageTop.php" ?>
-<div class="py-2" id="dvWelcome">
+<div id="dvWelcome">
     <h2>Welcome to <?= Constants::$projectName ?>.net!</h2>
 </div>
 

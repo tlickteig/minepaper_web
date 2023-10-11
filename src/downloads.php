@@ -5,7 +5,7 @@ define("PAGE_DESC", "Find where to install MinePaper from. Supported operating s
 ?>
 <?php require "$documentRoot/common/pageTop.php" ?>
 <div class="col-lg-10 mx-auto">
-    <div id="dvWelcome" class="py-3">
+    <div id="dvWelcome">
         <h2>Install <?= Constants::$projectName ?></h2>
     </div>
     <div class="row">
