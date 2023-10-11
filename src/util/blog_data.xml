@@ -1,5 +1,59 @@
 <blog>
     <article>
+        <dateAdded>2023-10-10</dateAdded>
+        <html>
+            <p>
+                Trying to get the most fun out of a low end computer can be frustrating. Luckily, there are a multitude of
+                settings we can tweak that will vastly improve our game performance without making the game look ugly. Most
+                of this will be based off of my own personal experience, however I will also be documenting how much each of
+                these settings impact performance on my little laptop, which has an AMD Ryzen 5 7530U with Radeon Graphics, 8
+                GB of RAM, and a 2TB SSD. It's a pretty solid midrange offering (aside from the upgraded SSD that I put into 
+                it), which one might very well might want to play Minecraft on casually, even on reduced settings.
+            </p>
+            <h2>VSync</h2>
+            <p>
+                In my experience, this is usually the biggest thing that I turn off when I find that I need to reduce the
+                settings. VSync locks the framerate of your game to the refresh rate to your monitor, meaning that you are
+                artificially limiting the performance of your computer's graphics processor. On lower ended hardware this
+                can cause stuttering since the graphics card is constantly going in between waiting around for your monitor
+                to refresh, and trying to pump out as many frames of video that it can. Turning this off can lead to screen 
+                tearing however, and I have seen it get pretty significant too. Still though, usually I prefer to trade a 
+                bit of screen tearing for a good amount of extra performance.
+            </p>
+            <p>
+                To test out this theory, I fired up Minecraft on my laptop. I found a woodland mansion, and run around
+                inside of it. With Vsync on, I was getting around 30-60 FPS depending on the amount of movement on the
+                screen. Could definitely do worse, however when I turned off VSync, it shot up to 100-150 FPS! That being
+                said however, there were some pretty harsh FPS spikes and tearing, but I was able to fix both of those
+                problems using the next things that I am going to mention.
+            </p>
+            <h2>The framerate limiter</h2>
+            <p>
+                If you have spent any time within the circles of the PC Master Race, you have definitely have had the
+                virtues of a high framerate extoled onto you like some weird deity. While that is mostly true, you also
+                want to want to avoid a concept called microstuttering. This happens when the average framerate is high,
+                yet the game still does not feel smooth because of significant swings in the current framerate. I was
+                experiencing that when I had VSync off. I was nearly cracking 200fps yet still having stuttering. Seems
+                counterintuitive, but the framerate limiter is the super easy and straightforward way to solve the problem.
+            </p>
+            <p>
+                Going back to the game then, I went ahead and set the maximum framerate to 60FPS. Doing this finally got
+                the game to run buttery smooth on my little laptop. Even better, it mostly got rid of the screen tearing
+                too! This is because the refresh rate of the display is 60HZ, so locking the framerate at 60FPS naturally
+                syncs the Graphics processor with the display. Regardless of how this is accomplished however, what matters
+                is that this setting makes the performace consistent across many different scenarios, which is crucial
+                to optimizing your playing experience.
+            </p>
+        </html>
+        <description>Learn how to improve the amount of FPS you are getting in Minecraft.</description>
+        <category>General</category>
+        <title>How to get more FPS in Minecraft</title>
+        <author>Timothy Lickteig</author>
+        <path>/blog/article/get-more-fps-in-minecraft</path>
+        <id>7</id>
+        <thumbnailSrc>https://cdn.minepaper.net/blog/logo-1.png</thumbnailSrc>
+    </article>
+    <article>
         <dateAdded>2023-10-08</dateAdded>
         <html>
             <p>
