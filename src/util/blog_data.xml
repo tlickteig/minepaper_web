@@ -1,6 +1,6 @@
 <blog>
     <article>
-        <dateAdded>2023-10-10</dateAdded>
+        <dateAdded>2023-10-14</dateAdded>
         <html>
             <p>
                 Trying to get the most fun out of a low end computer can be frustrating. Luckily, there are a multitude of
@@ -99,7 +99,7 @@
         <author>Timothy Lickteig</author>
         <path>/blog/article/get-more-fps-in-minecraft</path>
         <id>7</id>
-        <thumbnailSrc>https://cdn.minepaper.net/blog/logo-1.png</thumbnailSrc>
+        <thumbnailSrc>https://cdn.minepaper.net/blog/minecraft_10_fps.png</thumbnailSrc>
     </article>
     <article>
         <dateAdded>2023-10-08</dateAdded>
