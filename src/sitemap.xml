@@ -829,6 +829,12 @@
 	<url>
 		<loc>https://minepaper.net/blog/index.php</loc>
 		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_10_fps.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_direct_connection_screen.png</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://cdn.minepaper.net/blog/wheat-seeds.webp</image:loc>
 		</image:image>
 		<image:image>
@@ -849,6 +855,57 @@
 	</url>
 	<url>
 		<loc>https://minepaper.net/about.php</loc>
+	</url>
+	<url>
+		<loc>https://minepaper.net/blog/article/get-more-fps-in-minecraft</loc>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_with_vsync_off.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_with_vsync_on.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_with_render_distance_set_to_32_chunks.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_with_render_distance_set_to_25_chunks.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_with_render_distance_set_to_16_chunks.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://minepaper.net/blog/article/set-up-a-java-edition-server</loc>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/jdk_download_windows.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_server_download_page.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/eula_txt_that_server_has_created.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/setting_eula_to_true_for_server.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_server_window_gui.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/minecraft_direct_connection_screen.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/server_properties_file.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/server_world_folder.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/server_player_json_folders.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://cdn.minepaper.net/blog/port_forwarding_screenshot.png</image:loc>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://minepaper.net/blog/article/how-do-seeds-work-in-minecraft</loc>
