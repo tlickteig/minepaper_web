@@ -27,6 +27,12 @@
                 said however, there were some pretty harsh FPS spikes and tearing, but I was able to fix both of those
                 problems using the next things that I am going to mention.
             </p>
+            <img src="https://cdn.minepaper.net/blog/minecraft_with_vsync_off.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="How Minecraft is running with Vsync off"/>
+            <br />
+            <br />
+            <img src="https://cdn.minepaper.net/blog/minecraft_with_vsync_on.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="How Minecraft is running with Vsync on"/>
+            <br />
+            <br />
             <h2>The framerate limiter</h2>
             <p>
                 If you have spent any time within the circles of the PC Master Race, you have definitely have had the
@@ -43,6 +49,48 @@
                 syncs the Graphics processor with the display. Regardless of how this is accomplished however, what matters
                 is that this setting makes the performace consistent across many different scenarios, which is crucial
                 to optimizing your playing experience.
+            </p>
+            <h2>The Render Distance</h2>
+            <p>
+                How much this next setting impacts performance will primarily be based on how much system memory and
+                VRAM that your computer has. When I was younger and trying to get Minecraft to run on whatever computer
+                I could get my hands on, this is the setting that I frequently ended up turning down to make the game
+                playable. When tweaking this setting, I generally prefer to start at high, and then slowly work my way
+                down until the framerate is where I want it.
+            </p>
+            <p>
+                As an example, let's crank the render distance all the way up to a maximum of 32 chunks. Currently the game
+                is running at a fairly poultry 18-25 FPS. If we stand still the FPS will pick up to around 30-40. Overall
+                I would consider that barely playable.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/minecraft_with_render_distance_set_to_32_chunks.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="Minecraft running with the render distance set to 32 chunks"/>
+            <br />
+            <br />
+            <p>
+                Now, I will decrease the render distance to 25 chunks. The game now runs at around 40 FPS, although there are
+                some pretty wild swings, so I'm not really satisfied yet.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/minecraft_with_render_distance_set_to_25_chunks.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="Minecraft running with the render distance set to 25 chunks"/>
+            <br />
+            <br />
+            <p>
+                Lastly, I will decrease the render distance down to 16 chunks. Finally, the game starts really running great.
+                there is still a bit of swing in framerate, however it only barely drops below 60 FPS. It'll be different
+                for every computer obviously, however you can generally use that same tactic to find your optimal render
+                distance, or go in reverse; i.e. starting at a really low render distance and slowly working your way up until
+                the framerate starts to chug.
+            </p>
+            <img src="https://cdn.minepaper.net/blog/minecraft_with_render_distance_set_to_16_chunks.png" class="col-md-3" style="width: 66%; object-fit: contain;" alt="Minecraft running with the render distance set to 16 chunks"/>
+            <br />
+            <br />
+            <h2>Conclusion</h2>
+            <p>
+                In conclusion, I hope that this article teaches you that tweaking your settings is a much better way to
+                achieve better performance than simply just blowing tons of money on new hardware. Every computer is different,
+                so tweaking your settings to be tailored to your hardware goes a long way, even if it is a high end system. In
+                addition, there are many other video settings you can try that will have their own unique impact on how the
+                game runs on your specific computer. So it is worth the time to take 10 minutes or so in a new installation to
+                play around in the video settings to get the game running exactly to your liking.
             </p>
         </html>
         <description>Learn how to improve the amount of FPS you are getting in Minecraft.</description>
